@@ -63,8 +63,21 @@
 </section>
 
   <section id="education" class="min-h-screen flex items-center justify-center">
-	<h2 class="text-3xl font-bold">Education</h2>
-	<!-- Add your projects content here -->
+	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+	  {#each educationData as { degree, institution, year, highlights }}
+		<div class="bg-base-100 p-6 rounded-lg shadow-lg">
+		  <h3 class="text-2xl font-semibold">{degree}</h3>
+		  <p class="text-lg">{institution}</p>
+		  <p class="text-sm text-gray-500 mb-4">{year}</p>
+		  <ul class="list-disc list-inside">
+			{#each highlights as highlight}
+			  <li>{highlight}</li>
+			{/each}
+		  </ul>
+		</div>
+	  {/each}
+	</div>
   </section>
   
 
