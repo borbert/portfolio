@@ -1,4 +1,37 @@
-
+<script>
+	const educationData = [
+    {
+      degree: "Doctor of Pharmacy (PharmD)",
+      institution: "University Name",
+      year: "Year Graduated",
+      highlights: [
+        "Clinical pharmacy specialization",
+        "Research in healthcare systems",
+        "Leadership in student organizations"
+      ]
+    },
+    {
+      degree: "Master of Business Administration (MBA)",
+      institution: "University Name",
+      year: "Year Graduated",
+      highlights: [
+        "Focus on healthcare management",
+        "Strategic leadership coursework",
+        "Capstone project on healthcare innovation"
+      ]
+    },
+    {
+      degree: "Computer Science Coursework",
+      institution: "Institution Name",
+      year: "Year Completed",
+      highlights: [
+        "Data structures and algorithms",
+        "Machine learning fundamentals",
+        "Software engineering principles"
+      ]
+    }
+  ];
+</script>
 <!-- "./Professional headshot.jpg"  -->
 <section id="home" class="min-h-screen flex flex-col items-center justify-center">
 	<div class="flex items-center max-w-4xl mb-8">
@@ -56,5 +89,12 @@
   <style>
 	section {
 	  scroll-margin-top: 64px; /* Adjust based on your navbar height */
+	}
+	.grid > div {
+		transition: all 0.3s ease-in-out;
+  	}
+  	.grid > div:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	}
   </style>
