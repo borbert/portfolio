@@ -1,7 +1,5 @@
 <script>
 
-import { onMount } from'svelte';import { scale } from 'svelte/transition';
-  import { quintOut } from 'svelte/easing';
   
   let expandedDegree = null;
 
@@ -174,6 +172,7 @@ import { onMount } from'svelte';import { scale } from 'svelte/transition';
     height: 80vh;
     z-index: 1000;
     overflow-y: auto;
+	
   }
   .education-card::after {
     content: '';
