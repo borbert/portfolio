@@ -35,7 +35,7 @@
 <!-- "./Professional headshot.jpg"  -->
 <section id="home" class="min-h-screen flex flex-col items-center justify-center">
 	<div class="flex items-center max-w-4xl mb-8">
-	  <img src="/Professional headshot.jpg" alt="pic" class="rounded-full bg-base-200 w-64 h-64 mr-8 object-cover object-center">
+	  <img src="/professional_headshot.jpg" alt="pic" class="rounded-full bg-base-200 w-80 h-80 mr-8 object-cover" style="object-position: center 10%;">
 	  <div class="max-w-md">
 		<h1 class="text-5xl font-bold">Hello there</h1>
 		<p class="py-6">
@@ -80,6 +80,7 @@
 	</div>
   </section>
   
+
 
   <section id="projects" class="min-h-screen flex items-center justify-center">
 	<h2 class="text-3xl font-bold">My Projects</h2>
