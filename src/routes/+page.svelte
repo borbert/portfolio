@@ -1,4 +1,14 @@
 <script>
+
+import { onMount } from'svelte';import { scale } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
+  
+  let expandedDegree = null;
+
+  function toggleExpand(degree) {
+    expandedDegree = expandedDegree === degree ? null : degree;
+  }
+
 	const educationData = [
     {
       degree: "Doctor of Pharmacy (PharmD)",
@@ -12,6 +22,7 @@
     },
     {
       degree: "Master of Business Administration (MBA)",
+	  concentration:"Finance",
       institution: "University Name",
       year: "Year Graduated",
       highlights: [
@@ -21,9 +32,10 @@
       ]
     },
     {
-      degree: "Computer Science Coursework",
-      institution: "Institution Name",
-      year: "Year Completed",
+      degree: "Master of Computer Science (MSCS)",
+	  concentration:"Data Mining and Intelligent Systems",
+      institution: "University of Tennessee",
+      year: "2024",
       highlights: [
         "Data structures and algorithms",
         "Machine learning fundamentals",
@@ -62,7 +74,7 @@
 		My experience pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.</p>
 </section>
 
-  <section id="education" class="min-h-screen flex items-center justify-center">
+  <!-- <section id="education" class="min-h-screen flex items-center justify-center">
 	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
 	  {#each educationData as { degree, institution, year, highlights }}
@@ -78,9 +90,47 @@
 		</div>
 	  {/each}
 	</div>
-  </section>
-  
+  </section> -->
 
+  <!-- <section id="education" class="min-h-screen flex items-center justify-center">
+	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+	  {#each educationData as { degree, institution, year, highlights }}
+		<div class="education-card bg-base-100 p-4 rounded-lg shadow-lg">
+		  <h3 class="text-2xl font-semibold">{degree}</h3>
+		  <div class="card-details">
+			<p class="text-lg">{institution}</p>
+			<p class="text-sm text-gray-500 mb-4">{year}</p>
+			<ul class="list-disc list-inside">
+			  {#each highlights as highlight}
+				<li>{highlight}</li>
+			  {/each}
+			</ul>
+		  </div>
+		</div>
+	  {/each}
+	</div>
+  </section> -->
+  
+  <section id="education" class="min-h-screen flex items-center justify-center">
+	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+	  {#each educationData as { degree, institution, year, highlights }}
+		<div class="education-card bg-base-100 p-4 rounded-lg shadow-lg">
+		  <h3 class="text-2xl font-semibold">{degree}</h3>
+		  <div class="card-details">
+			<p class="text-lg">{institution}</p>
+			<p class="text-sm text-gray-500 mb-4">{year}</p>
+			<ul class="list-disc list-inside">
+			  {#each highlights as highlight}
+				<li>{highlight}</li>
+			  {/each}
+			</ul>
+		  </div>
+		</div>
+	  {/each}
+	</div>
+  </section>
 
   <section id="projects" class="min-h-screen flex items-center justify-center">
 	<h2 class="text-3xl font-bold">My Projects</h2>
@@ -111,4 +161,41 @@
 		transform: translateY(-5px);
 		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	}
+	.education-card {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  .education-card:hover {
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  .education-card::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+  .education-card:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .card-details {
+    display: none;
+  }
+  .education-card:hover .card-details {
+    display: block;
+  }
   </style>
