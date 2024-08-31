@@ -20,27 +20,34 @@ function nextCard() {
   hoveredIndex = (hoveredIndex + 1) % educationData.length;
 }
 
+
+let hoveredCard = null;
+
 	const educationData = [
     {
       degree: "Doctor of Pharmacy (PharmD)",
-      institution: "University Name",
-      year: "Year Graduated",
+      institution: "Campbell University",
+      year: "2006",
       highlights: [
         "Clinical pharmacy specialization",
         "Research in healthcare systems",
         "Leadership in student organizations"
-      ]
+      ], 
+	  icon:"/campbell-logo.png",
+	  key_projects:[],
     },
     {
       degree: "Master of Business Administration (MBA)",
 	  concentration:"Finance",
-      institution: "University Name",
-      year: "Year Graduated",
+      institution: "East Carolina University",
+      year: "2010",
       highlights: [
         "Focus on healthcare management",
         "Strategic leadership coursework",
         "Capstone project on healthcare innovation"
-      ]
+      ], 
+	  icon:"/ecu-logo.png",
+	  key_projects:[],
     },
     {
       degree: "Master of Computer Science (MSCS)",
@@ -48,10 +55,21 @@ function nextCard() {
       institution: "University of Tennessee",
       year: "2024",
       highlights: [
-        "Data structures and algorithms",
-        "Machine learning fundamentals",
-        "Software engineering principles"
-      ]
+        "Machine Learning",
+        "Deep Learning",
+        "Compliers and Runtime Systems",
+		"Data Mining and Analytics",
+		"Artifical Intelligence",
+		"Advanced Software Engineering",
+		"Digital Archeolgy",
+		"Applied Cryptography",
+		"Web & Cloud Computing",
+		"Compture Networks",
+      ], 
+	  icon:"/UTlogo.png",
+	  key_projects:[
+
+	  ],
     }
   ];
 </script>
@@ -85,39 +103,94 @@ function nextCard() {
 		My experience pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.</p>
 </section>
 
-
-<section id="education" class="min-h-screen flex items-center justify-center">
+<!-- <h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2> -->
+<!-- <section id="education" class="min-h-screen flex items-center justify-center">
 	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
-	  {#each educationData as { degree }, index}
-	  <div 
-	  class="education-card p-4 rounded-lg shadow-lg relative"
-	  on:mouseenter={() => showGallery(index)}
-	  on:mouseleave={hideGallery}
-	>
-	  {#if hoveredIndex !== index}
-		<h3 class="text-2xl font-semibold">{degree}</h3>
-	  {:else}
-		<div 
-		  class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-white p-8 rounded-lg shadow-lg z-50 overflow-auto"
-		  transition:fade={{ duration: 150 }}
-		>
-		  <h3 class="text-3xl font-bold mb-4">{educationData[hoveredIndex].degree}</h3>
-		  <p class="text-xl mb-2">{educationData[hoveredIndex].institution}</p>
-		  <p class="text-lg mb-4">{educationData[hoveredIndex].year}</p>
-		  <ul class="list-disc list-inside">
-			{#each educationData[hoveredIndex].highlights as highlight}
-			  <li>{highlight}</li>
-			{/each}
-		  </ul>
-		  	<button on:click|stopPropagation={prevCard} class="absolute left-4 top-1/2 transform -translate-y-1/2 text-4xl text-gray-600 hover:text-gray-800">&#8249;</button>
-			<button on:click|stopPropagation={nextCard} class="absolute right-4 top-1/2 transform -translate-y-1/2 text-4xl text-gray-600 hover:text-gray-800">&#8250;</button>
+	  {#each educationData as { degree, institution, year, concentration, highlights }}
+		<div class="education-card bg-base-100 p-4 rounded-lg shadow-lg">
+		  <h3 class="text-2xl font-semibold">{degree}</h3>
+		  <div class="card-details">
+			<p class="text-lg">{institution}</p>
+			{#if concentration}
+				<p class="text-md  text-gray-500 mb-1">{concentration}</p>
+			{/if}
+			<p class="text-sm text-gray-500 mb-4">{year}</p>
+			<ul class="list-disc list-inside">
+				<p class="text-lg">Relavent Coursework</p>
+			  {#each highlights as highlight}
+				<li>{highlight}</li>
+			  {/each}
+			</ul>
+		  </div>
 		</div>
-	  {/if}
+	  {/each}
 	</div>
+  </section> -->
+
+  <!-- <section id="education" class="min-h-screen flex items-center justify-center">
+	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+	  {#each educationData as { degree, institution, year, concentration, highlights }, index}
+		<div 
+		  class="education-card bg-base-100 p-4 rounded-lg shadow-lg"
+		  on:mouseenter={() => hoveredCard = index}
+		  on:mouseleave={() => hoveredCard = null}
+		>
+		  <h3 class="text-2xl font-semibold">{degree}</h3>
+		  {#if hoveredCard === index}
+			<div class="card-details">
+			  <p class="text-lg">{institution}</p>
+			  {#if concentration}
+				<p class="text-md text-gray-500 mb-1">{concentration}</p>
+			  {/if}
+			  <p class="text-sm text-gray-500 mb-4">{year}</p>
+			  <ul class="list-disc list-inside">
+				<p class="text-lg">Relevant Coursework</p>
+				{#each highlights as highlight}
+				  <li>{highlight}</li>
+				{/each}
+			  </ul>
+			</div>
+		  {/if}
+		</div>
+	  {/each}
+	</div>
+  </section> -->
+
+  <section id="education" class="min-h-screen flex items-center justify-center">
+	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+	  {#each educationData as { degree, institution, year, concentration, highlights, icon }, index}
+		<div 
+		  class="education-card bg-base-100 p-4 rounded-lg shadow-lg flex justify-between items-start"
+		  on:mouseenter={() => hoveredCard = index}
+		  on:mouseleave={() => hoveredCard = null}
+		>
+		  <div class="flex-grow">
+			<h3 class="text-2xl font-semibold">{degree}</h3>
+			{#if hoveredCard === index}
+			  <div class="card-details">
+				<p class="text-lg">{institution}</p>
+				{#if concentration}
+				  <p class="text-md text-gray-500 mb-1">{concentration}</p>
+				{/if}
+				<p class="text-sm text-gray-500 mb-4">{year}</p>
+				<ul class="list-disc list-inside">
+				  <p class="text-lg">Relevant Coursework</p>
+				  {#each highlights as highlight}
+					<li>{highlight}</li>
+				  {/each}
+				</ul>
+			  </div>
+			{/if}
+		  </div>
+		  <img src={icon} alt={institution} class="w-16 h-16 object-contain ml-4" />
+		</div>
 	  {/each}
 	</div>
   </section>
+
 
   <section id="projects" class="min-h-screen flex items-center justify-center">
 	<h2 class="text-3xl font-bold">My Projects</h2>
@@ -148,7 +221,7 @@ function nextCard() {
 		transform: translateY(-5px);
 		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	}
-.education-card {
+	.education-card {
     transition: all 0.3s ease-in-out;
     position: relative;
     z-index: 1;
@@ -162,5 +235,4 @@ function nextCard() {
   z-index: 1000;
   overflow-y: auto;
   }
-
   </style>
