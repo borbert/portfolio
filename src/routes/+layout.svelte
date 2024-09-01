@@ -23,6 +23,7 @@
 			tabindex="0"
 			class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
 			<li><a href="#home">Home</a></li>
+			<li><a href="#expertise">Expertise</a></li>
 			<li><a href="#about">About Me</a></li>
 			<li><a href="#education">Education</a></li>
 			<li><a href="#projects">Projects</a></li>

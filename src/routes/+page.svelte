@@ -55,7 +55,7 @@ let hoveredCard = null;
     },
     {
       degree: "Master of Business Administration (MBA)",
-	  concentration:"Finance",
+	  concentration:"Graduate Certificate in Finance",
       institution: "East Carolina University",
       year: "2010",
       highlights: [
@@ -125,6 +125,21 @@ let hoveredCard = null;
 	  <p class="italic">
 		"To leverage my diverse skill set in healthcare, technology, and leadership to drive innovative solutions that enhance patient care and operational efficiency in healthcare systems."
 	  </p>
+	</div>
+  </section>
+
+  <section id="expertise" class="min-h-screen flex flex-col items-center justify-center bg-base-200">
+	<div class="max-w-4xl mx-auto px-4">
+	  <h2 class="text-4xl font-bold mb-8 text-center">Current Areas of Expertise</h2>
+	  <ul class="list-disc space-y-4">
+		<li>Applying <strong>existing and emerging technologies</strong> to health system problems</li>
+		<li>Applying <strong>data science</strong>, <strong>artificial intelligence (AI)</strong>, and <strong>machine learning (ML)</strong> to health system problems</li>
+		<li>Finding and evaluating <strong>organizational changes</strong> to improve health system <strong>financial standing</strong></li>
+		<li><strong>Drug discount programs</strong>, <strong>supply chain optimization</strong>, and optimizing health system <strong>drug costs</strong></li>
+		<li>Evaluating, creating, and implementing health system <strong>data infrastructures</strong></li>
+		<li>Creating and growing <strong>specialized enterprise teams</strong> in health systems</li>
+		<li>Turning <strong>novel ideas</strong> and <strong>home grown solutions</strong> into <strong>data tools</strong> and/or <strong>technology products</strong></li>
+	  </ul>
 	</div>
   </section>
   
