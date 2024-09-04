@@ -288,7 +288,7 @@ let hoveredCard = null;
 		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	}
 	.education-card {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     position: relative;
     z-index: 1;
   }
@@ -296,10 +296,9 @@ let hoveredCard = null;
 	position: fixed;
   top: 10vh;
   left: 10vw;
-  width: auto;
-  height: auto;
-  max-width: 80vw;
-  max-height: 80vh;
+  width: 80vw;
+  height: 80vh;
+
   z-index: 1000;
   overflow-y: auto;
   }
