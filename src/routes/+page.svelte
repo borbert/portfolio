@@ -20,7 +20,6 @@ function nextCard() {
   hoveredIndex = (hoveredIndex + 1) % educationData.length;
 }
 
-
 let hoveredCard = null;
 
 	const educationData = [
@@ -143,73 +142,17 @@ let hoveredCard = null;
 	</div>
   </section>
   
-  
   <section id="bio" class="py-16 flex flex-col items-center justify-center">
 	<div class="w-full text-center mb-8">
 		<h1 class="text-4xl font-bold">Biography</h1>
 	</div>
-	<div class="bg-base-100 px-20 rounded-lg shadow-lg">
+	<div class="bg-base-100 px-20 py-8 rounded-lg shadow-lg">
 		<p>With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
 			Applying my formal education in healthcare, business, and computer science has afforded me a uniqiue perspecitve on health care problems.  
 			I have been involved in a mirad of projects requiring complex data analysis in areas with high degree of regulatory and financial implications for the health system.  
 			My experience pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.</p>
 	</div>
 </section>
-
-<!-- <h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2> -->
-<!-- <section id="education" class="min-h-screen flex items-center justify-center">
-	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
-	  {#each educationData as { degree, institution, year, concentration, highlights }}
-		<div class="education-card bg-base-100 p-4 rounded-lg shadow-lg">
-		  <h3 class="text-2xl font-semibold">{degree}</h3>
-		  <div class="card-details">
-			<p class="text-lg">{institution}</p>
-			{#if concentration}
-				<p class="text-md  text-gray-500 mb-1">{concentration}</p>
-			{/if}
-			<p class="text-sm text-gray-500 mb-4">{year}</p>
-			<ul class="list-disc list-inside">
-				<p class="text-lg">Relavent Coursework</p>
-			  {#each highlights as highlight}
-				<li>{highlight}</li>
-			  {/each}
-			</ul>
-		  </div>
-		</div>
-	  {/each}
-	</div>
-  </section> -->
-
-  <!-- <section id="education" class="min-h-screen flex items-center justify-center">
-	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
-	  {#each educationData as { degree, institution, year, concentration, highlights }, index}
-		<div 
-		  class="education-card bg-base-100 p-4 rounded-lg shadow-lg"
-		  on:mouseenter={() => hoveredCard = index}
-		  on:mouseleave={() => hoveredCard = null}
-		>
-		  <h3 class="text-2xl font-semibold">{degree}</h3>
-		  {#if hoveredCard === index}
-			<div class="card-details">
-			  <p class="text-lg">{institution}</p>
-			  {#if concentration}
-				<p class="text-md text-gray-500 mb-1">{concentration}</p>
-			  {/if}
-			  <p class="text-sm text-gray-500 mb-4">{year}</p>
-			  <ul class="list-disc list-inside">
-				<p class="text-lg">Relevant Coursework</p>
-				{#each highlights as highlight}
-				  <li>{highlight}</li>
-				{/each}
-			  </ul>
-			</div>
-		  {/if}
-		</div>
-	  {/each}
-	</div>
-  </section> -->
 
   <section id="education" class="py-20 flex flex-col items-center justify-center">
 	<div class="w-full text-center mb-8">
