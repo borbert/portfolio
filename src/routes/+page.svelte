@@ -128,7 +128,7 @@ let hoveredCard = null;
 	</div>
   </section>
 
-  <section id="expertise" class="min-h-screen flex flex-col items-center justify-center bg-base-200">
+  <section id="expertise" class="py-16 flex flex-col items-center justify-center bg-base-200">
 	<div class="max-w-4xl mx-auto px-4">
 	  <h2 class="text-4xl font-bold mb-8 text-center">Current Areas of Expertise</h2>
 	  <ul class="list-disc space-y-4">
@@ -144,12 +144,16 @@ let hoveredCard = null;
   </section>
   
   
-  <section id="bio" class="min-h-screen flex items-center justify-center">
-	<h1 class="text-4xl mr-4 ml-4 font-bold">Biography</h1>
-	<p>With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
-		Applying my formal education in healthcare, business, and computer science has afforded me a uniqiue perspecitve on health care problems.  
-		I have been involved in a mirad of projects requiring complex data analysis in areas with high degree of regulatory and financial implications for the health system.  
-		My experience pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.</p>
+  <section id="bio" class="py-16 flex flex-col items-center justify-center">
+	<div class="w-full text-center mb-8">
+		<h1 class="text-4xl font-bold">Biography</h1>
+	</div>
+	<div class="bg-base-100 px-20 rounded-lg shadow-lg">
+		<p>With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
+			Applying my formal education in healthcare, business, and computer science has afforded me a uniqiue perspecitve on health care problems.  
+			I have been involved in a mirad of projects requiring complex data analysis in areas with high degree of regulatory and financial implications for the health system.  
+			My experience pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.</p>
+	</div>
 </section>
 
 <!-- <h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2> -->
@@ -207,8 +211,10 @@ let hoveredCard = null;
 	</div>
   </section> -->
 
-  <section id="education" class="min-h-screen flex items-center justify-center">
-	<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
+  <section id="education" class="py-20 flex flex-col items-center justify-center">
+	<div class="w-full text-center mb-8">
+		<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
+	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
 	  {#each educationData as { degree, institution, year, concentration, highlights, icon }, index}
 		<div 
@@ -241,7 +247,7 @@ let hoveredCard = null;
   </section>
 
 
-  <section id="projects" class="min-h-screen flex items-center justify-center">
+  <section id="projects" class="py-16 flex flex-col items-center justify-center">
 	<h2 class="text-3xl font-bold">My Projects</h2>
 	<div>
 		<a href="/projects" class="btn">Project Details</a>
@@ -249,12 +255,12 @@ let hoveredCard = null;
 	<!-- Add your projects content here -->
   </section>
   
-  <section id="about" class="min-h-screen flex items-center justify-center">
+  <section id="about" class="py-16 flex flex-col items-center justify-center">
 	<h2 class="text-3xl font-bold">About Me</h2>
 	<!-- Add your about content here -->
   </section>
   
-  <section id="contact" class="min-h-screen flex items-center justify-center">
+  <section id="contact" class="py-16 flex flex-col items-center justify-center">
 	<h2 class="text-3xl font-bold">Connect</h2>
 	<!-- Add your contact form or information here -->
   </section>
