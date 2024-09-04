@@ -296,8 +296,10 @@ let hoveredCard = null;
 	position: fixed;
   top: 10vh;
   left: 10vw;
-  width: 80vw;
-  height: 80vh;
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 80vh;
   z-index: 1000;
   overflow-y: auto;
   }
