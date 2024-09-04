@@ -215,7 +215,7 @@ let hoveredCard = null;
 	<div class="w-full text-center mb-8">
 		<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+	<div class="flex flex-row gap-8 overflow-x-auto max-w-full px-8 mb-8">
 	  {#each educationData as { degree, institution, year, concentration, highlights, icon }, index}
 		<div 
 		  class="education-card bg-base-100 p-4 rounded-lg shadow-lg flex justify-between items-start"
@@ -223,7 +223,10 @@ let hoveredCard = null;
 		  on:mouseleave={() => hoveredCard = null}
 		>
 		  <div class="flex-grow">
-			<h3 class="text-2xl font-semibold">{degree}</h3>
+			<div class="flex items-center mb-4">
+			<img src={icon} alt={institution} class="w-16 h-16 object-contain mr-4" />
+			<h3 class="text-xl font-semibold">{degree}</h3>
+			</div>
 			{#if hoveredCard === index}
 			  <div class="card-details">
 				<p class="text-lg">{institution}</p>
@@ -240,7 +243,7 @@ let hoveredCard = null;
 			  </div>
 			{/if}
 		  </div>
-		  <img src={icon} alt={institution} class="w-16 h-16 object-contain ml-4" />
+		  
 		</div>
 	  {/each}
 	</div>
@@ -248,11 +251,19 @@ let hoveredCard = null;
 
 
   <section id="projects" class="py-16 flex flex-col items-center justify-center">
-	<h2 class="text-3xl font-bold">My Projects</h2>
+	<h2 class="text-3xl font-bold">Projects</h2>
 	<div>
 		<a href="/projects" class="btn">Project Details</a>
 	</div>
 	<!-- Add your projects content here -->
+  </section>
+
+  <section id="presentations" class="py-16 flex flex-col items-center justify-center">
+	<h2 class="text-3xl font-bold">Presentations</h2>
+	<div>
+		<a href="/projects" class="btn">Presentation Details</a>
+	</div>
+	<!-- Add your presentations content here -->
   </section>
   
   <section id="about" class="py-16 flex flex-col items-center justify-center">
