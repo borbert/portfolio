@@ -130,7 +130,7 @@ let hoveredCard = null;
 
   <section id="expertise" class="py-16 flex flex-col items-center justify-center bg-base-200">
 	<div class="max-w-4xl mx-auto px-4">
-	  <h2 class="text-4xl font-bold mb-8 text-center">Current Areas of Expertise</h2>
+	  <h2 class="text-4xl font-bold mb-8 text-center">Areas of Expertise</h2>
 	  <ul class="list-disc space-y-4">
 		<li>Applying <strong>existing and emerging technologies</strong> to health system problems</li>
 		<li>Applying <strong>data science</strong>, <strong>artificial intelligence (AI)</strong>, and <strong>machine learning (ML)</strong> to health system problems</li>
