@@ -1,6 +1,15 @@
 <script>
 
 import { fade, fly } from 'svelte/transition';
+import { onMount } from 'svelte';
+
+let isMobile = false;
+
+onMount(() => {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  isMobile = mediaQuery.matches;
+  mediaQuery.addListener((e) => isMobile = e.matches);
+});
 
 let hoveredIndex = -1;
 
@@ -117,6 +126,76 @@ let hoveredCard = null;
 	  ],
     }
   ];
+
+  const projectCategories = [
+  {
+    title: "Technology Implementations",
+    icon: "/path/to/tech-icon.png",
+    items: [
+      "EHR Implementations",
+      "Automation Implementations",
+      "340B TPA/ EHR Implementations"
+    ]
+  },
+  {
+    title: "Data Governance",
+    icon: "/path/to/governance-icon.png",
+    items: [
+      "Establishing data governance processes and oversight teams",
+      "Establishing standard operating procedures to reinforce governance and master data management within analytics teams"
+    ]
+  },
+  {
+    title: "Application Development",
+    icon: "/path/to/app-dev-icon.png",
+    items: [
+      "340BDrugInfo.com",
+      "CrabChat (rust based secure chat application)",
+      "This portfolio site"
+    ]
+  },
+  {
+    title: "Data Science",
+    icon: "/path/to/data-science-icon.png",
+    items: [
+      "Analysis of blocked \"bots\" by scraping robot.txt files from the internet",
+      "Analyzing sentiment changes after the introduction of the protagonist in the works of Arthur Conan Doyle",
+      "Latent space cluster analysis of the movie \"Honey I Shrunk the Kids!\""
+    ]
+  },
+  {
+    title: "Machine Learning",
+    icon: "/path/to/ml-icon.png",
+    items: [
+      "Melanoma detection with XX",
+      "Detecting ambulation types by collected sound data",
+      "Detecting Autism with eye gaze paths",
+      "Predicting Titanic Survivors (Kaggle Link)"
+    ]
+  },
+  {
+    title: "Deep Learning",
+    icon: "/path/to/deep-learning-icon.png",
+    items: [
+      "Real time object detection in sterile compounding suites",
+      "Transformers to generate \"new\" Beatles lyrics",
+      "Generate images in the style of Monet (Kaggle link)"
+    ]
+  },
+  {
+    title: "Natural Language Processing",
+    icon: "/path/to/nlp-icon.png",
+    items: [
+      "Detect disasters from X (Twitter) tweets (Kaggle)",
+      "Digit recognition (Kaggle)",
+      "Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words (spooky)"
+    ]
+  }
+];
+$: abbreviations = projectCategories.map(category => {
+    return category.title.split(' ').map(word => word[0]).join('');
+  });
+
 </script>
 
 <section id="home" class="min-h-screen flex flex-col items-center justify-center">
@@ -206,7 +285,33 @@ let hoveredCard = null;
 
 
   <section id="projects" class="py-16 flex flex-col items-center justify-center">
-	<h2 class="text-3xl font-bold">Projects</h2>
+	<!-- <h2 class="text-3xl font-bold">Projects</h2> -->
+	<div class="w-full text-center mb-8">
+		<h2 class="text-4xl font-bold">Projects</h2>
+	  </div>
+	  <div class="max-w-6xl mx-auto px-4">
+		{#each projectCategories as category, index}
+		  <div class="mb-12 flex flex-col md:flex-row">
+			<div class="w-full md:w-1/4 pr-4 mb-4 md:mb-0 flex justify-center md:justify-start">
+			  {#if isMobile}
+				<div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+				  {abbreviations[index]}
+				</div>
+			  {:else}
+				<img src={category.icon} alt={category.title} class="w-full h-auto object-contain" />
+			  {/if}
+			</div>
+			<div class="w-full md:w-3/4">
+			  <h3 class="text-2xl font-semibold mb-4">{category.title}</h3>
+			  <ul class="list-disc list-inside">
+				{#each category.items as item}
+				  <li>{item}</li>
+				{/each}
+			  </ul>
+			</div>
+		  </div>
+		{/each}
+	  </div>
 	<div>
 		<a href="/projects" class="btn">Project Details</a>
 	</div>
@@ -256,5 +361,10 @@ let hoveredCard = null;
 
   z-index: 1000;
   overflow-y: auto;
+  }
+  @media (max-width: 768px) {
+    .flex-col {
+      align-items: center;
+    }
   }
   </style>
