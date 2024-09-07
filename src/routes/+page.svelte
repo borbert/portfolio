@@ -406,9 +406,9 @@ $: abbreviations = projectCategories.map(category => {
 		  </div>
 		{/each}
 	  </div>
-	<div>
+	<!-- <div>
 		<a href="/projects" class="btn">Presentation Details</a>
-	</div>
+	</div> -->
 	<!-- Add your presentations content here -->
   </section>
   
