@@ -398,7 +398,7 @@ $: abbreviations = projectCategories.map(category => {
 			<h3 class="text-2xl font-semibold">{presentation.title}</h3>
 			<p class="text-gray-600">{presentation.event} - {presentation.date}</p>
 			{#if presentation.link}
-			  <a href={presentation.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">View Presentation</a>
+			  <a href={presentation.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Presentation Link</a>
 			{/if}
 			{#if presentation.description}
 			  <p class="mt-4 text-gray-700">{presentation.description}</p>
