@@ -285,10 +285,10 @@ $: abbreviations = projectCategories.map(category => {
 	</div>
   </section>
 
-  <section id="expertise" class="py-16 flex flex-col items-center justify-center bg-base-200">
-	<div class="max-w-4xl mx-auto px-4">
+  <section id="expertise" class="py-16 flex flex-col items-center justify-center bg-base-200 {isMobile ? 'px-4' : ''}">
+	<div class="max-w-4xl mx-auto">
 	  <h2 class="text-4xl font-bold mb-8 text-center">Areas of Expertise</h2>
-	  <ul class="list-disc space-y-4">
+	  <ul class="list-disc space-y-4 {isMobile ? 'pl-6' : 'pl-0'}">
 		<li>Applying <strong>existing and emerging technologies</strong> to health system problems</li>
 		<li>Applying <strong>data science</strong>, <strong>artificial intelligence (AI)</strong>, and <strong>machine learning (ML)</strong> to health system problems</li>
 		<li>Finding and evaluating <strong>organizational changes</strong> to improve health system <strong>financial standing</strong></li>
@@ -300,23 +300,24 @@ $: abbreviations = projectCategories.map(category => {
 	</div>
   </section>
   
-  <section id="bio" class="py-16 flex flex-col items-center justify-center">
-	<div class="w-full text-center mb-8">
-		<h1 class="text-4xl font-bold">Biography</h1>
+  
+  <section id="bio" class="py-16 {isMobile ? 'px-4' : ''}">
+	<div class="max-w-4xl mx-auto">
+	  <h1 class="text-4xl font-bold mb-6 text-center">Biography</h1>
+	  <div class="bg-base-100 p-6 rounded-lg shadow-lg {isMobile ? 'text-center' : ''}">
+		<p>
+		  With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
+		  Applying my formal education in healthcare, business, and computer science has afforded me a unique perspective on health care problems.  
+		  I have been involved in a myriad of projects requiring complex data analysis in areas with high degree of regulatory and financial implications for the health system.  
+		  My experience in pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.
+		</p>
+	  </div>
 	</div>
-	<div class="bg-base-100 px-20 py-8 rounded-lg shadow-lg">
-		<p>With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
-			Applying my formal education in healthcare, business, and computer science has afforded me a uniqiue perspecitve on health care problems.  
-			I have been involved in a mirad of projects requiring complex data analysis in areas with high degree of regulatory and financial implications for the health system.  
-			My experience pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.</p>
-	</div>
-</section>
+  </section>
 
   <section id="education" class="py-20 flex flex-col items-center justify-center">
-	<div class="w-full text-center mb-8">
-		<h2 class="text-4xl mr-4 ml-4 font-bold mb-8">Education</h2>
-	</div>
-	<div class="flex flex-row gap-8 overflow-x-auto max-w-full px-8 mb-8">
+	<h2 class="text-4xl font-bold mb-8 text-center">Education</h2>
+	<div class="grid grid-cols-1 {isMobile ? '' : 'md:grid-cols-2'} gap-8 max-w-4xl mx-auto">
 	  {#each educationData as { degree, institution, year, concentration, highlights, icon }, index}
 		<div 
 		  class="education-card bg-base-100 p-4 rounded-lg shadow-lg flex justify-between items-start"
