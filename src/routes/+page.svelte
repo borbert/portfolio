@@ -130,7 +130,7 @@ let hoveredCard = null;
   const projectCategories = [
   {
     title: "Technology Implementations",
-    icon: "/path/to/tech-icon.png",
+    icon: "/ML_computer_icon.jpeg",
     items: [
       "EHR Implementations",
       "Automation Implementations",
@@ -139,7 +139,7 @@ let hoveredCard = null;
   },
   {
     title: "Data Governance",
-    icon: "/path/to/governance-icon.png",
+    icon: "/data_governance.png",
     items: [
       "Establishing data governance processes and oversight teams",
       "Establishing standard operating procedures to reinforce governance and master data management within analytics teams"
@@ -147,7 +147,7 @@ let hoveredCard = null;
   },
   {
     title: "Application Development",
-    icon: "/path/to/app-dev-icon.png",
+    icon: "/application_development.png",
     items: [
       "340BDrugInfo.com",
       "CrabChat (rust based secure chat application)",
@@ -156,7 +156,7 @@ let hoveredCard = null;
   },
   {
     title: "Data Science",
-    icon: "/path/to/data-science-icon.png",
+    icon: "/data_science_icon.png",
     items: [
       "Analysis of blocked \"bots\" by scraping robot.txt files from the internet",
       "Analyzing sentiment changes after the introduction of the protagonist in the works of Arthur Conan Doyle",
@@ -165,7 +165,7 @@ let hoveredCard = null;
   },
   {
     title: "Machine Learning",
-    icon: "/path/to/ml-icon.png",
+    icon: "/ML_icon.png",
     items: [
       "Melanoma detection with XX",
       "Detecting ambulation types by collected sound data",
@@ -175,7 +175,7 @@ let hoveredCard = null;
   },
   {
     title: "Deep Learning",
-    icon: "/path/to/deep-learning-icon.png",
+    icon: "/dl_icon.png",
     items: [
       "Real time object detection in sterile compounding suites",
       "Transformers to generate \"new\" Beatles lyrics",
@@ -184,7 +184,7 @@ let hoveredCard = null;
   },
   {
     title: "Natural Language Processing",
-    icon: "/path/to/nlp-icon.png",
+    icon: "/nlp_icon.jpeg",
     items: [
       "Detect disasters from X (Twitter) tweets (Kaggle)",
       "Digit recognition (Kaggle)",
