@@ -102,6 +102,18 @@ let hoveredCard = null;
 	  icon:"/UTlogo.png",
 	  key_projects:[
 
+	  ],},
+	{
+	  degree: "Lean Six Sigma Black Belt (LSSBB)",
+	  concentration:"Healthcare",
+      institution: "Villanova",
+      year: "2014",
+      highlights: [
+    
+      ], 
+	  icon:"/villanova icon.png",
+	  key_projects:[
+
 	  ],
     }
   ];
