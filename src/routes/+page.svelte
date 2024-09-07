@@ -302,12 +302,14 @@ $: abbreviations = projectCategories.map(category => {
 			  {/if}
 			</div>
 			<div class="w-full md:w-3/4">
-			  <h3 class="text-2xl font-semibold mb-4">{category.title}</h3>
-			  <ul class="list-disc list-inside">
-				{#each category.items as item}
-				  <li>{item}</li>
-				{/each}
-			  </ul>
+			  <div class="project-card bg-base-100 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
+				<h3 class="text-2xl font-semibold mb-4">{category.title}</h3>
+				<ul class="list-disc list-inside">
+				  {#each category.items as item}
+					<li>{item}</li>
+				  {/each}
+				</ul>
+			  </div>
 			</div>
 		  </div>
 		{/each}
