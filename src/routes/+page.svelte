@@ -266,10 +266,15 @@ $: abbreviations = projectCategories.map(category => {
 </script>
 
 <section id="home" class="min-h-screen flex flex-col items-center justify-center">
-	<div class="flex {isMobile ? 'flex-col' : 'flex-row'} items-center max-w-4xl mb-8">
-		<img src="/professional_headshot.jpg" alt="pic" class="rounded-full bg-base-200 w-64 h-64 {isMobile ? 'mb-8' : 'mr-8'} object-cover" style="object-position: center 10%;">
+	<div class="flex items-center max-w-4xl mb-8 {isMobile ? 'flex-col px-4' : ''}">
+		<img 
+  src="/professional_headshot.jpg" 
+  alt="pic" 
+  class="rounded-full bg-base-200 w-80 h-80 {isMobile ? 'mb-6 pt-16' : 'mr-8'} object-cover" 
+  style="object-position: center 20%;"
+>
 		<div class="max-w-md {isMobile ? 'text-center' : ''}">
-		  <h1 class="text-5xl font-bold">Hello there</h1>
+		  <h1 class="text-5xl font-bold {isMobile ? 'mb-4' : ''}">Hello there</h1>
 		  <p class="py-6">
 		  I am Robert (Bob) Owens, a strategic thinker and problem solver with education in pharmacy, business, computer science, data science, and intelligent systems. 
 		  With extensive experience in pharmacy administration and leadership at a top non-profit health system, I leverage my analytical skills to drive change and develop innovative solutions in healthcare.
@@ -277,7 +282,7 @@ $: abbreviations = projectCategories.map(category => {
 		</p>
 	  </div>
 	</div>
-	<div class="text-center max-w-2xl">
+	<div class="text-center max-w-2xl {isMobile ? 'px-4' : ''}">
 	  <h2 class="text-2xl font-semibold mb-4">Mission Statement</h2>
 	  <p class="italic">
 		"To leverage my diverse skill set in healthcare, technology, and leadership to drive innovative solutions that enhance patient care and operational efficiency in healthcare systems."
@@ -301,18 +306,17 @@ $: abbreviations = projectCategories.map(category => {
   </section>
   
   
-  <section id="bio" class="py-16 {isMobile ? 'px-4' : ''}">
-	<div class="max-w-4xl mx-auto">
-	  <h1 class="text-4xl font-bold mb-6 text-center">Biography</h1>
-	  <div class="bg-base-100 p-6 rounded-lg shadow-lg {isMobile ? 'text-center' : ''}">
-		<p>
+  <section id="bio" class="py-8 {isMobile ? 'px-4' : 'py-16'} flex items-center justify-center">
+	<div class="max-w-{isMobile ? 'full' : '4xl'} mx-auto">
+	  <h1 class="text-3xl {isMobile ? '' : 'mr-4 ml-4'} font-bold mb-6 text-center">Biography</h1>
+	  <p class="{isMobile ? 'text-sm' : ''}">
 		  With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
 		  Applying my formal education in healthcare, business, and computer science has afforded me a unique perspective on health care problems.  
 		  I have been involved in a myriad of projects requiring complex data analysis in areas with high degree of regulatory and financial implications for the health system.  
 		  My experience in pharmacy administration has allowed me to lead transformative projects that integrate emerging technologies and innovative approaches into pharmacy operations.
 		</p>
 	  </div>
-	</div>
+	<!-- </div> -->
   </section>
 
   <section id="education" class="py-20 flex flex-col items-center justify-center">
@@ -435,23 +439,22 @@ $: abbreviations = projectCategories.map(category => {
 		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 	}
 	.education-card {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     position: relative;
     z-index: 1;
   }
   .education-card:hover {
-	position: fixed;
-  top: 10vh;
-  left: 10vw;
-  width: 80vw;
-  height: 80vh;
-
-  z-index: 1000;
-  overflow-y: auto;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
   @media (max-width: 768px) {
-    .flex-col {
-      align-items: center;
+    .education-card:hover {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      height: auto;
+      transform: none;
     }
   }
   </style>
