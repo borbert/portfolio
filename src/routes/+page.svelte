@@ -196,6 +196,73 @@ $: abbreviations = projectCategories.map(category => {
     return category.title.split(' ').map(word => word[0]).join('');
   });
 
+  const presentations = [
+  {
+    title: "Making IT Work With 340B",
+    event: "340B Health",
+    date: "Feb 21, 2023",
+    description: "Chatting with Myles Goldman about the intersection of IT and 340B.",
+    link: "https://podcasts.apple.com/us/podcast/340b-insight/id1511566964?i=1000600877836"
+  },
+  {
+    title: "340B Challenges with Information Technology: Potential Solutions",
+    event: "340B Coalition Summer Conference",
+    date: "Aug 2, 2022",
+    description: "Discussion on 340B implementation, operationalization, and continuous compliance relying on data from various healthcare IT systems.",
+    link: null
+  },
+  {
+    title: "Managing 340B Drug Shortages",
+    event: "340B Coalition Summer Conference",
+    date: "Aug 2, 2022",
+    description: "Addressing strategies for purchasing drugs, achieving access and the 340B price for covered outpatient drugs, and managing drug inventory during shortages.",
+    link: "https://lnkd.in/epw2MKB."
+  },
+  {
+    title: "Maximizing Return on Investment in a 340B Environment",
+    event: "Premier Breakthroughs Conference 2020",
+    date: "Aug 5, 2020",
+    description: "Focusing on 340B auditing processes, ROI justification, and strategies for pharmacy purchasing environment.",
+    link: null
+  },
+  {
+    title: "Justifying Monitoring Activities in a 340B Program",
+    event: "340B Coalition Winter Conference 2020",
+    date: "Feb 12, 2020",
+    description: null,
+    link: null
+  },
+  {
+    title: "Borrow and Lend/Buy and Sell Techniques",
+    event: "Apexus Advanced 340B Operations Certificate Webinar Series",
+    date: "Oct 12, 2019",
+    description: "Techniques to achieve operational efficiency while supporting compliance in 340B operations.",
+    link: null
+  },
+  {
+    title: "Management and Documentation of 340B Drug Waste",
+    event: "340B Coalition Summer Conference",
+    date: "Jul 11, 2018",
+    description: "Inventory Management: Strategies for Compliance and Efficiency",
+    link: null
+  },
+  {
+    title: "Management and Documentation of 340B Drug Waste",
+    event: "340B Health Member Webinars",
+    date: "May 28, 2018",
+    description: null,
+    link: "https://www.340bhealth.org/files/Webinar_5_29_18.pdf"
+  },
+  {
+    title: "The Road to Transforming the Patient Experience",
+    event: "Premier Breakthroughs Conference 2014",
+    date: "Jul 12, 2014",
+    description: "Focusing on organizational infrastructure for patient-centered care, key performance indicators, and the role of patient-focused multidisciplinary rounds.",
+    link: null
+  }
+];
+
+
 </script>
 
 <section id="home" class="min-h-screen flex flex-col items-center justify-center">
@@ -321,7 +388,24 @@ $: abbreviations = projectCategories.map(category => {
   </section>
 
   <section id="presentations" class="py-16 flex flex-col items-center justify-center">
-	<h2 class="text-3xl font-bold">Presentations</h2>
+	<!-- <h2 class="text-3xl font-bold">Presentations</h2> -->
+	<div class="w-full text-center mb-8">
+		<h2 class="text-4xl font-bold">Presentations</h2>
+	  </div>
+	  <div class="max-w-6xl mx-auto px-4">
+		{#each presentations as presentation}
+		  <div class="mb-6 presentation-card bg-base-100 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
+			<h3 class="text-2xl font-semibold">{presentation.title}</h3>
+			<p class="text-gray-600">{presentation.event} - {presentation.date}</p>
+			{#if presentation.link}
+			  <a href={presentation.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">View Presentation</a>
+			{/if}
+			{#if presentation.description}
+			  <p class="mt-4 text-gray-700">{presentation.description}</p>
+			{/if}
+		  </div>
+		{/each}
+	  </div>
 	<div>
 		<a href="/projects" class="btn">Presentation Details</a>
 	</div>
