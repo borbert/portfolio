@@ -266,11 +266,11 @@ $: abbreviations = projectCategories.map(category => {
 </script>
 
 <section id="home" class="min-h-screen flex flex-col items-center justify-center">
-	<div class="flex items-center max-w-4xl mb-8">
-	  <img src="/professional_headshot.jpg" alt="pic" class="rounded-full bg-base-200 w-80 h-80 mr-8 object-cover" style="object-position: center 10%;">
-	  <div class="max-w-md">
-		<h1 class="text-5xl font-bold">Hello there</h1>
-		<p class="py-6">
+	<div class="flex {isMobile ? 'flex-col' : 'flex-row'} items-center max-w-4xl mb-8">
+		<img src="/professional_headshot.jpg" alt="pic" class="rounded-full bg-base-200 w-64 h-64 {isMobile ? 'mb-8' : 'mr-8'} object-cover" style="object-position: center 10%;">
+		<div class="max-w-md {isMobile ? 'text-center' : ''}">
+		  <h1 class="text-5xl font-bold">Hello there</h1>
+		  <p class="py-6">
 		  I am Robert (Bob) Owens, a strategic thinker and problem solver with education in pharmacy, business, computer science, data science, and intelligent systems. 
 		  With extensive experience in pharmacy administration and leadership at a top non-profit health system, I leverage my analytical skills to drive change and develop innovative solutions in healthcare.
 		  My passion lies in utilizing technology, analytics, and process improvement to enhance operational efficiency and improve patient outcomes, making me a valuable asset in both clinical and administrative settings.
