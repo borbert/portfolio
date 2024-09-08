@@ -132,42 +132,50 @@ let hoveredCard = null;
     title: "Technology Implementations",
     icon: "/ML_computer_icon.jpeg",
     items: [
-      "EHR Implementations",
-      "Automation Implementations",
-      "340B TPA/ EHR Implementations"
+      "Single hospital, multisite/multifacility, and health system Electronic Health Record (EHR) Implementations",
+      "Multiple vendor pharmacy automation Implmentations",
+      "Single hospital, multisite/multifacility, and health system 340B Third-party Administrator (TPA) implementations with multiple vendors",
+	  "Home grown techonology combined with processes to supplement or be used as stop gaps measures pending technology implementations"
     ]
   },
   {
     title: "Data Governance",
     icon: "/data_governance.png",
     items: [
-      "Establishing data governance processes and oversight teams",
-      "Establishing standard operating procedures to reinforce governance and master data management within analytics teams"
+      "Connecting pharmacy departments with health system data governance and master data management (MDM)",
+	  "Establishing data governance processes and oversight teams",
+      "Establishing standard operating proceudres to reinforce governance and master data management within analytics teams",
+	  "Aligning workteams across business units and corporate infromation technology (IT) to foster collaboration"
     ]
   },
   {
     title: "Application Development",
     icon: "/application_development.png",
     items: [
-      "340BDrugInfo.com",
-      "CrabChat (rust based secure chat application)",
-      "This portfolio site"
+		
+      "Web development: examples 340BDrugInfo.com, this portfolio site.",
+      "CrabChat (Rust based secure chat application)",
+	  "Application programing interface (API) development and websocket programming",
+	  "Agile development and project management",
     ]
   },
   {
     title: "Data Science",
     icon: "/data_science_icon.png",
     items: [
-      "Analysis of blocked \"bots\" by scraping robot.txt files from the internet",
-      "Analyzing sentiment changes after the introduction of the protagonist in the works of Arthur Conan Doyle",
-      "Latent space cluster analysis of the movie \"Honey I Shrunk the Kids!\""
+		"Financial, clinical, and tranactional based analysis of health system data using multiple statistical techniques",
+		"Finding and exploting patterns in data to drive operational efficiency and improve patient outcomes",
+      "Analysis of data collected via web scraping with Python packages (httpx and beautifulsoup4)",
+      "Sentiment analysis of health system data using natural language processing (NLP) techniques to help define topics and trends",
+      "Latent space cluster analysis of the clinical documentation as opposed to large language models (LLM) interpretation of the same data"
     ]
   },
   {
     title: "Machine Learning",
     icon: "/ML_icon.png",
     items: [
-      "Melanoma detection with XX",
+      "Forecasting drug costs using classical machine learning and time series technigues",
+      "Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions",
       "Detecting ambulation types by collected sound data",
       "Detecting Autism with eye gaze paths",
       "Predicting Titanic Survivors (Kaggle Link)"
@@ -178,7 +186,8 @@ let hoveredCard = null;
     icon: "/dl_icon.png",
     items: [
       "Real time object detection in sterile compounding suites",
-      "Transformers to generate \"new\" Beatles lyrics",
+      "Using transformers to generate \"new\" song lyrics in the style of the original artist",
+	  "Generating images with Generative Adversarial Networks (GANs)",
       "Generate images in the style of Monet (Kaggle link)"
     ]
   },
@@ -186,6 +195,7 @@ let hoveredCard = null;
     title: "Natural Language Processing",
     icon: "/nlp_icon.jpeg",
     items: [
+		"Using LLMs to analyze clinical documentation and generate insights",
       "Detect disasters from X (Twitter) tweets (Kaggle)",
       "Digit recognition (Kaggle)",
       "Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words (spooky)"
@@ -197,6 +207,13 @@ $: abbreviations = projectCategories.map(category => {
   });
 
   const presentations = [
+	{
+    title: "Pharmacy Data Governance Journey",
+    event: "Prominence Data Governance Roundtable",
+    date: "Aug 19, 2024",
+    description: "Describing the journey of a pharmacy department to establish data governance in collaboration with enterprise data governance efforts.",
+    link: ""
+  },
   {
     title: "Making IT Work With 340B",
     event: "340B Health",
@@ -261,7 +278,6 @@ $: abbreviations = projectCategories.map(category => {
     link: null
   }
 ];
-
 
 </script>
 
@@ -395,7 +411,7 @@ $: abbreviations = projectCategories.map(category => {
   <section id="presentations" class="py-16 flex flex-col items-center justify-center">
 	<!-- <h2 class="text-3xl font-bold">Presentations</h2> -->
 	<div class="w-full text-center mb-8">
-		<h2 class="text-4xl font-bold">Presentations</h2>
+		<h2 class="text-4xl font-bold">Professional Presentations</h2>
 	  </div>
 	  <div class="max-w-6xl mx-auto px-4">
 		{#each presentations as presentation}
