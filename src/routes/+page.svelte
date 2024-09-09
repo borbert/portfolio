@@ -166,7 +166,7 @@ let hoveredCard = null;
 		"Financial, clinical, and tranactional based analysis of health system data using multiple statistical techniques",
 		"Finding and exploting patterns in data to drive operational efficiency and improve patient outcomes",
       "Analysis of data collected via web scraping with Python packages (httpx and beautifulsoup4)",
-	  "Social network analysis"
+	  "Social network analysis",
       "Sentiment analysis of health system data using natural language processing (NLP) techniques to help define topics and trends",
       "Latent space cluster analysis of the clinical documentation as opposed to large language models (LLM) interpretation of the same data"
     ]
