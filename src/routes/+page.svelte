@@ -1,6 +1,5 @@
 <script>
 
-import { fade, fly } from 'svelte/transition';
 import { onMount } from 'svelte';
 
 let isMobile = false;
@@ -10,24 +9,6 @@ onMount(() => {
   isMobile = mediaQuery.matches;
   mediaQuery.addListener((e) => isMobile = e.matches);
 });
-
-let hoveredIndex = -1;
-
-  function showGallery(index) {
-    hoveredIndex = index;
-  }
-
-  function hideGallery() {
-    hoveredIndex = -1;
-  }
-
-  function prevCard() {
-  hoveredIndex = (hoveredIndex - 1 + educationData.length) % educationData.length;
-}
-
-function nextCard() {
-  hoveredIndex = (hoveredIndex + 1) % educationData.length;
-}
 
 let hoveredCard = null;
 
@@ -153,9 +134,9 @@ let hoveredCard = null;
     icon: "/application_development.png",
     items: [
 		
-      "Web development: examples 340BDrugInfo.com, this portfolio site.",
+      'Web development: examples <a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>, this portfolio site.',
       "CrabChat (Rust based secure chat application)",
-	  "Application programing interface (API) development and websocket programming",
+	  "Application programing interface (API) development, full stack development, and websocket programming",
 	  "Agile development and project management",
     ]
   },
@@ -176,20 +157,20 @@ let hoveredCard = null;
     icon: "/ML_icon.png",
     items: [
       "Forecasting drug costs using classical machine learning and time series technigues",
-      "Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions",
-      "Detecting ambulation types by collected sound data",
-      "Detecting Autism with eye gaze paths",
-      "Predicting Titanic Survivors (Kaggle Link)"
+      'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions <a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>',
+      'Detecting ambulation types by collected sound data <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>',
+      'Detecting Autism with eye gaze paths <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>',
+      'Predicting Titanic Survivors <a href="https://www.kaggle.com/code/robertlowens/notebook8d06f319ad" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
     ]
   },
   {
     title: "Deep Learning",
     icon: "/dl_icon.png",
     items: [
-      "Real time object detection in sterile compounding suites",
+      'Real time object detection in sterile compounding suites <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>',
       "Using transformers to generate \"new\" song lyrics in the style of the original artist",
 	  "Generating images with Generative Adversarial Networks (GANs)",
-      "Generate images in the style of Monet (Kaggle link)"
+      'Generate images in the style of Monet <a href="https://www.kaggle.com/robertlowens/bob-cyclegan-pytorch" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
     ]
   },
   {
@@ -197,9 +178,9 @@ let hoveredCard = null;
     icon: "/nlp_icon.jpeg",
     items: [
 		"Using LLMs to analyze clinical documentation and generate insights",
-      "Detect disasters from X (Twitter) tweets (Kaggle)",
-      "Digit recognition (Kaggle)",
-      "Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words (spooky)"
+      'Detect disasters from X (Twitter) tweets <a href=" https://www.kaggle.com/code/robertlowens/bowens-7-15" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
+      'Digit recognition  <a href="https://www.kaggle.com/code/robertlowens/bobassignment8-17" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
+      'Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>'
     ]
   }
 ];
@@ -409,7 +390,7 @@ const aboutMeData = {
 				<h3 class="text-2xl font-semibold mb-4">{category.title}</h3>
 				<ul class="list-disc list-inside">
 				  {#each category.items as item}
-					<li>{item}</li>
+					<li>{@html item}</li>
 				  {/each}
 				</ul>
 			  </div>
@@ -475,15 +456,10 @@ const aboutMeData = {
   </div>
 </section>
 
-  
-  <!-- <section id="contact" class="py-16 flex flex-col items-center justify-center">
-	<h2 class="text-3xl font-bold">How to Connect Me</h2>
-  </section> -->
-
   <section id="contact" class="min-h-screen flex flex-col items-center justify-center bg-base-200">
 	<h2 class="text-4xl font-bold mb-8">Connect with...</h2>
 	<div class="flex flex-col items-center space-y-4">
-		<ul>
+		<ul class="list-disc space-y-3 text-lg">
 			<li>
 				Further 
 				<a href="/projects" class="text-primary hover:underline text-lg">project details</a>
