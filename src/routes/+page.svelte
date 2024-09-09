@@ -138,7 +138,7 @@ let hoveredCard = null;
       "CrabChat (Rust based secure chat application)",
 	  "Application programing interface (API) development, full stack development, and websocket programming",
 	  "Agile development and project management",
-	  "Cloud computing:  Azure and AWS"
+	  "Cloud services stack:  Azure and AWS"
     ]
   },
   {
