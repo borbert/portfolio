@@ -167,7 +167,7 @@ let hoveredCard = null;
     title: "Deep Learning",
     icon: "/dl_icon.png",
     items: [
-      'Real time object detection in sterile compounding suites <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>',
+      'Real time object detection in sterile compounding suites <a href="/Real_time_Object_Detection_in_Sterile_Compounding_Areas.pdf" download class="text-primary hover:underline text-md">pdf</a>',
       "Using transformers to generate \"new\" song lyrics in the style of the original artist",
 	  "Generating images with Generative Adversarial Networks (GANs)",
       'Generate images in the style of Monet <a href="https://www.kaggle.com/robertlowens/bob-cyclegan-pytorch" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
