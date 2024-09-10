@@ -37,6 +37,7 @@
     },
 ];
 
+
 let selectedProject = null;
   
 function openModal(project) {
