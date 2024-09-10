@@ -420,7 +420,7 @@ const aboutMeData = {
 			  <a href={presentation.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Presentation Link</a>
 			{/if}
 			{#if presentation.description}
-			  <p class="mt-4 text-gray-700">{presentation.description}</p>
+			  <p class="mt-4">{presentation.description}</p>
 			{/if}
 		  </div>
 		{/each}
