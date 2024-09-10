@@ -332,10 +332,11 @@ const aboutMeData = {
 	  </div>
   </section> -->
 
-  <section id="bio" class="py-16 bg-gradient-to-br from-primary/10 to-secondary/10">
+  <!-- bg-gradient-to-br from-primary/10 to-secondary/10 -->
+  <section id="bio" class="py-16">
 	<div class="max-w-4xl mx-auto px-4">
 	  <h1 class="text-4xl font-bold mb-6 text-center">Biography</h1>
-	  <div class=" p-8 shadow-lg">
+	  <div class=" p-8 ">
 		<p class="text-text leading-relaxed">
 		  With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
 		  Applying my formal education in healthcare, business, and computer science has afforded me a unique perspective on health care problems.  
