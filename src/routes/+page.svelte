@@ -466,13 +466,13 @@ const aboutMeData = {
 				Further 
 				<a href="/projects" class="text-primary hover:underline text-lg">project details</a>
 			</li>
-			<li>Send me an email 
+			<!-- <li>Send me an email 
 				<a href="mailto:contact@bobowens.me" class="btn btn-ghost btn-circle">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 					  <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
 					</svg>
 				  </a>
-			</li>
+			</li> -->
 			<li>
 				View my Github profile 
 				<a href="https://github.com/borbert" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-circle">
