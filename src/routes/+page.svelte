@@ -529,9 +529,29 @@ const aboutMeData = {
     }
   }
   .presentation-card {
-    font-family: inherit;
-    font-size: 1rem;
-	color: var(--text-primary);
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .presentation-card h3 {
+    color: var(--text-accent);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .presentation-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .presentation-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+    }
   }
   .presentation-card a {
     color: #3b82f6;
