@@ -306,7 +306,7 @@ const aboutMeData = {
 
   <section id="expertise" class="py-16 flex flex-col items-center justify-center bg-background{isMobile ? 'px-4' : ''}">
 	<div class="max-w-4xl mx-auto">
-	  <h2 class="text-4xl font-bold mb-8 text-center text-primary">Areas of Expertise</h2>
+	  <h2 class="text-4xl font-bold mb-8 text-center">Areas of Expertise</h2>
 	  <ul class="list-disc space-y-4 {isMobile ? 'pl-6' : 'pl-0'}">
 		<li>Applying <strong>existing and emerging technologies</strong> to health system problems</li>
 		<li>Applying <strong>data science</strong>, <strong>artificial intelligence (AI)</strong>, and <strong>machine learning (ML)</strong> to health system problems</li>
@@ -334,7 +334,7 @@ const aboutMeData = {
 
   <section id="bio" class="py-16 bg-gradient-to-br from-primary/10 to-secondary/10">
 	<div class="max-w-4xl mx-auto px-4">
-	  <h1 class="text-4xl font-bold mb-6 text-center text-primary">Biography</h1>
+	  <h1 class="text-4xl font-bold mb-6 text-center">Biography</h1>
 	  <div class="bg-white p-8 shadow-lg">
 		<p class="text-text leading-relaxed">
 		  With a robust background in health system pharmacy and technology, I have dedicated my career to improving healthcare systems through leadership, process improvement, data analytics, and machine learning. 
