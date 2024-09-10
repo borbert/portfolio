@@ -6,7 +6,7 @@
   {
     title: "Melanoma detection with OpenCV",
     image: "/melanoma_pic.png",
-      overview: "Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions",
+      overview: 'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions <a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>.',
       detail_description:"",
       team: ["Will LaForge","Kyle Shannon","Bob Owens"],
       duration: "Project duration",
@@ -16,7 +16,7 @@
     {
     title: "Real time object detection in sterile compounding",
     image: "/iv_detection.png",
-      overview: 'Real time object detection in sterile compounding suites <a href="/Real_time_Object_Detection_in_Sterile_Compounding_Areas.pdf" download class="text-primary hover:underline text-md">pdf</a> using YOLOv8',
+      overview: 'Real time object detection in sterile compounding suites using YOLOv8 <a href="/Real_time_Object_Detection_in_Sterile_Compounding_Areas.pdf" download class="text-primary hover:underline text-md">pdf</a>.',
       detail_description:"This paper presents an innovative approach to enhancing safety and efficiency in sterile compounding areas through the implementation of real-time object detection using computer vision and machine learning techniques. The research focuses on developing a system capable of identifying and tracking various objects and personnel within the sterile environments. By leveraging state-of-the-art deep learning models and custom-trained datasets specific to pharmacy compounding settings, the system achieves high accuracy in object detection and classification. The potiential real-time application of the system allows for immediate alerts and interventions, significantly reducing the risk of errors and contamination in critical sterile compounding processes. The paper discusses the methodology, experimental results, and potential applications of this technology in improving patient safety and regulatory compliance in pharmaceutical compounding facilities.",
       role: "Team project",
       team: ["Andrew Waggoner","Kyle Russell","Bob Owens"],
@@ -80,14 +80,14 @@ function openModal(project) {
                 <button class="btn btn-primary" on:click={() => openModal(project)}>
                   View Details
                 </button>
-                <!-- <Modal show={selectedProject !== null} onClose={closeModal}>
+                <Modal show={selectedProject !== null} onClose={closeModal}>
                     {#if selectedProject}
                       <img src={selectedProject.image} alt={selectedProject.title} class="w-full h-64 object-cover mb-4" />
                       <h2 class="text-2xl font-bold mb-2">{selectedProject.title}</h2>
                       <p class="mb-4">{selectedProject.description}</p>
     
                     {/if}
-                </Modal> -->
+                </Modal>
               </div>
             </div>
 

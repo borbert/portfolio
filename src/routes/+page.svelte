@@ -158,9 +158,9 @@ let hoveredCard = null;
     icon: "/ML_icon.png",
     items: [
       "Forecasting drug costs using classical machine learning and time series technigues",
-      'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions <a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>',
-      'Detecting ambulation types by collected sound data <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>',
-      'Detecting Autism with eye gaze paths <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>',
+      'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions', //<a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>
+      'Detecting ambulation types by collected sound data', //<a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
+      'Detecting Autism with eye gaze paths',  // <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
       'Predicting Titanic Survivors <a href="https://www.kaggle.com/code/robertlowens/notebook8d06f319ad" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
     ]
   },
@@ -181,7 +181,7 @@ let hoveredCard = null;
 		"Using LLMs to analyze clinical documentation and generate insights",
       'Detect disasters from X (Twitter) tweets <a href=" https://www.kaggle.com/code/robertlowens/bowens-7-15" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
       'Digit recognition  <a href="https://www.kaggle.com/code/robertlowens/bobassignment8-17" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
-      'Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>'
+      'Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words', //<a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
     ]
   }
 ];
