@@ -415,7 +415,7 @@ const aboutMeData = {
 		{#each presentations as presentation}
 		  <div class="mb-6 presentation-card bg-base-100 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
 			<h3 class="text-2xl font-semibold">{presentation.title}</h3>
-			<p class="text-gray-600">{presentation.event} - {presentation.date}</p>
+			<p>{presentation.event} - {presentation.date}</p>
 			{#if presentation.link}
 			  <a href={presentation.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Presentation Link</a>
 			{/if}
