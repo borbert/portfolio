@@ -271,9 +271,10 @@ const aboutMeData = {
     activities: [
       "Attending my children's sporting events",
       "Reading about the latest ML/AI research",
-      "Exploring new developments in data science"
+      "Exploring new developments in data science",
+	  "Traveling"
     ],
-    personalStatement: "As a native of East Tennessee and a father of three active boys, I balance my professional pursuits with family life. When I'm not cheering at my children's sporting events, you'll find me deeply engrossed in the latest advancements and research in ML/AI and data science. My passion for technology and innovation is matched only by my enthusiasm for college football."
+    personalStatement: "As a native of East Tennessee and a husband and father of three active boys, I balance my professional pursuits with family life. When I'm not cheering at my children's sporting events, you'll find me deeply engrossed in the latest advancements and research in ML/AI and data science. My passion for technology and innovation is matched only by my enthusiasm for college football and traveling."
   };
 
 </script>
@@ -466,7 +467,7 @@ const aboutMeData = {
 				<a href="/projects" class="text-primary hover:underline text-lg">project details</a>
 			</li>
 			<li>Send me an email 
-				<a href="mailto:your.email@example.com" class="btn btn-ghost btn-circle">
+				<a href="mailto:contact@bobowens.me" class="btn btn-ghost btn-circle">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 					  <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
 					</svg>
@@ -527,4 +528,20 @@ const aboutMeData = {
       transform: none;
     }
   }
+  .presentation-card {
+    font-family: inherit;
+    font-size: 1rem;
+	color: var(--text-primary);
+  }
+  .presentation-card a {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  .presentation-card a:hover {
+    text-decoration: underline;
+  }
+  li {
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
   </style>
