@@ -113,7 +113,7 @@ let hoveredCard = null;
     title: "Technology Implementations",
     icon: "/ML_computer_icon.jpeg",
     items: [
-      "Single hospital, multisite/multifacility, and health system Electronic Health Record (EHR) Implementations",
+      "Single hospital, multisite/multifacility, and health system Electronic Health Record (EHR) implementations",
       "Multiple vendor pharmacy automation Implmentations",
       "Single hospital, multisite/multifacility, and health system 340B Third-party Administrator (TPA) implementations with multiple vendors",
 	  "Home grown techonology combined with processes to supplement or be used as stop gaps measures pending technology implementations"
@@ -125,7 +125,7 @@ let hoveredCard = null;
     items: [
       "Connecting pharmacy departments with health system data governance and master data management (MDM)",
 	  "Establishing data governance processes and oversight teams",
-      "Establishing standard operating proceudres to reinforce governance and master data management within analytics teams",
+      "Instituting standard operating proceudres to reinforce governance and master data management within analytics teams",
 	  "Aligning workteams across business units and corporate infromation technology (IT) to foster collaboration"
     ]
   },
@@ -287,7 +287,7 @@ const aboutMeData = {
   class="rounded-full bg-base-200 w-80 h-80 {isMobile ? 'mb-6 pt-16' : 'mr-8'} object-cover" 
   style="object-position: center 20%;"
 >
-		<div class="max-w-md {isMobile ? 'text-center' : ''}">
+	<div class="max-w-md {isMobile ? 'text-center' : ''}">
 		  <!-- <h1 class="text-5xl font-bold {isMobile ? 'mb-4' : ''}">Hello there</h1> -->
 		  <p class="py-6">
 		  Hi, there.  My name is Robert (Bob) Owens. I am a strategic thinker and problem solver with education in pharmacy, business, computer science, data science, and intelligent systems. 
