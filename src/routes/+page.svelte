@@ -288,9 +288,9 @@ const aboutMeData = {
   style="object-position: center 20%;"
 >
 		<div class="max-w-md {isMobile ? 'text-center' : ''}">
-		  <h1 class="text-5xl font-bold {isMobile ? 'mb-4' : ''}">Hello there</h1>
+		  <!-- <h1 class="text-5xl font-bold {isMobile ? 'mb-4' : ''}">Hello there</h1> -->
 		  <p class="py-6">
-		  I am Robert (Bob) Owens, a strategic thinker and problem solver with education in pharmacy, business, computer science, data science, and intelligent systems. 
+		  Hi, there.  My name is Robert (Bob) Owens. I am a strategic thinker and problem solver with education in pharmacy, business, computer science, data science, and intelligent systems. 
 		  With extensive experience in pharmacy administration and leadership at a top non-profit health system, I leverage my analytical skills to drive change and develop innovative solutions in healthcare.
 		  My passion lies in utilizing technology, analytics, and process improvement to enhance operational efficiency and improve patient outcomes, making me a valuable asset in both clinical and administrative settings.
 		</p>
