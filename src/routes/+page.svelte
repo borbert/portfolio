@@ -266,7 +266,8 @@ const aboutMeData = {
       "Native of East Tennessee",
       "Father of three active boys",
       "Avid college football fan",
-      "Passionate about ML/AI and data science advancements"
+	  "Served in the Army National Guard and in active duty following September 11th, 2001",
+      "Passionate about ML/AI and data science advancements",
     ],
     activities: [
       "Attending my children's sporting events",
@@ -293,6 +294,7 @@ const aboutMeData = {
 		  Hi, there.  My name is Robert (Bob) Owens. I am a strategic thinker and problem solver with education in pharmacy, business, computer science, data science, and intelligent systems. 
 		  With extensive experience in pharmacy administration and leadership at a top non-profit health system, I leverage my analytical skills to drive change and develop innovative solutions in healthcare.
 		  My passion lies in utilizing technology, analytics, and process improvement to enhance operational efficiency and improve patient outcomes, making me a valuable asset in both clinical and administrative settings.
+		  As a veteran of US military, I also bring discipline, leadership, and perserverance sharpened by service.
 		</p>
 	  </div>
 	</div>
