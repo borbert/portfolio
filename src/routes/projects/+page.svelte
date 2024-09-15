@@ -68,7 +68,7 @@ function openModal(project) {
         {#each projects as project}
 
           <div class="card bg-base-100 w-64 card-bordered border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h2 class="card-title mb-3 mt-3 mr-2 ml-2 text-center">{project.title}</h2>
+              <h2 class="card-body font-bold mb-3 mt-3 mr-2 ml-2 text-center">{project.title}</h2>
             <figure class="px-0 pt-0">
               <img src={project.image} alt={project.title} class="w-full h-20 object-cover" />
             </figure>
