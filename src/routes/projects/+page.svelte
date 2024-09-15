@@ -91,7 +91,7 @@ function openModal(project) {
                       {/each}
                       {/if}
 
-                      {#if selectedProject.team}
+                      {#if selectedProject.skills}
                       <h3 class="technologies font-bold mt-4">Technologies Applied</h3>
                       {#each selectedProject.skills as skill}
                         <p>{skill}</p>
