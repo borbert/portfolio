@@ -28,8 +28,8 @@
     {
     title: "Autism Detection with Eye Gaze Paths",
     image: "/autism_gaze.png",
-    detail_description:"",
-      overview: 'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions <a href="/annotated-ROwens-assignment-1.pdf" download class="text-primary hover:underline text-md">pdf</a>',
+    detail_description:"Data was collected from subjects as they watched a video.  The data was the path of their eye gaze as they watched the video.  The assumption behind this research is that individuals with autism focus or avoid certain parts of the video, for exmaple they respond to faces in the video differently than individuals who show no signs of autism. This eye gaze path data was used with a variet of techniques to creates features to use in a machine learning model.",
+      overview: 'Can the eye gaze path of subject help detect autism?',
       role: "Team project",
       team: "",
       skills: ["OpenCV", "CV Project", "Machine Learning"],
@@ -38,7 +38,7 @@
     {
     title: "340BDrugInfo.com",
     image: "/www.340bdruginfo.com_drugsearch.png",
-    detail_description:"This website leverages the APIs available from the FDA NDC Drug Dictonary and the Medicaid Drug Rebate Program (MDRP).  It also uses the CMS ASP NDC Crosswalk to provide additional information.  The objective of this web app is to give a 340B practioner package size information at the 9-digit NDC level and the CMS HCPCS and billing units per package information.  The MDRP data allows one to know if that drug has been included in the MDRP program.",
+    detail_description:'This website leverages the APIs available from the FDA NDC Drug Dictonary and the Medicaid Drug Rebate Program (MDRP).  It also uses the CMS ASP NDC Crosswalk to provide additional information.  The objective of this web app is to give a 340B practioner package size information at the 9-digit NDC level and the CMS HCPCS and billing units per package information.  The MDRP data allows one to know if that drug has been included in the MDRP program. <a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>',
       overview: '<a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a> is a website that where I combined three drug information resources that were useful for 340B operations and management.',
       role: "",
       team: "",
@@ -82,7 +82,7 @@ function openModal(project) {
                     {#if selectedProject}
                       <img src={selectedProject.image} alt={selectedProject.title} class="w-full h-64 object-cover mb-4" />
                       <h2 class="text-2xl font-bold mb-2">{selectedProject.title}</h2>
-                      <p class="mb-4">{selectedProject.detail_description}</p>
+                      <p class="mb-4">{@html selectedProject.detail_description}</p>
 
                       {#if selectedProject.team}
                       <h3 class="team font-bold">Team</h3>
