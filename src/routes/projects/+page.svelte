@@ -45,6 +45,17 @@
       skills: ["Web Development", "Full Stack Development", "Golang", "React"],
       paper_link: "",
     },
+    {
+    title: "CrabChat",
+    image: "/CrabChat.png",
+    detail_description:'Crab chat is a full-scale messaging application aimed at those who are concerned with privacy. It emphasizes client-side storage and encryption as methods to enhance user privacy. Performance and scale was another key feature. Many privacy-oriented applications are not very performant. Crab Chat seeks to remedy this issue by using a high-performance IO library, Tokio, which will help easily achieve a high throughput and low latency. Using an asynchronous IO library, can easily increase scalability.',
+      overview: 'Crab Chat is a full scale chat app built with performance and security in mind. <a href="https://github.com/borbert/CS540Group6ChatAppFinal" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Github Repo</a> ',
+      role: "",
+      team: ["Chris Degawa", "Bob Owens", "Corey Lovette", "Ewan Mcgarvey",
+      "Mahim Mathur", "Noah Archer", "Skylar Reed"],
+      skills: ["Agile Development", "Full Stack Development", "Rust", "Tokio and Tauri", "Svelte"],
+      paper_link: "/CS540 Group 6 - Crabchat.pdf",
+    },
 ];
 
 
