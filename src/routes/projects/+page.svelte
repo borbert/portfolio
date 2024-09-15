@@ -38,7 +38,7 @@
     {
     title: "340BDrugInfo.com",
     image: "/www.340bdruginfo.com_drugsearch.png",
-    detail_description:'This website leverages the APIs available from the FDA NDC Drug Dictonary and the Medicaid Drug Rebate Program (MDRP).  It also uses the CMS ASP NDC Crosswalk to provide additional information.  The objective of this web app is to give a 340B practioner package size information at the 9-digit NDC level and the CMS HCPCS and billing units per package information.  The MDRP data allows one to know if that drug has been included in the MDRP program. <a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>',
+    detail_description:'This website leverages the APIs available from the FDA NDC Drug Dictonary and the Medicaid Drug Rebate Program (MDRP).  It also uses the CMS ASP NDC Crosswalk to provide additional information.  The objective of this web app is to give a 340B practioner package size information at the 9-digit NDC level and the CMS HCPCS and billing units per package information.  The MDRP data allows one to know if that drug has been included in the MDRP program. <a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>.  I created this tool in 2021 and published it on the web in 2022.',
       overview: '<a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a> is a website that where I combined three drug information resources that were useful for 340B operations and management.',
       role: "",
       team: "",
