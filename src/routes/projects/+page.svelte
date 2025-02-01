@@ -3,6 +3,17 @@
     import Modal from '../../components/modal.svelte';
 
     const projects = [
+      {
+    title: "MedSupply",
+    image: "/medsupply.png",
+      overview: 'Medication supply dashboard for clinic distribution in healthsystems.',
+      detail_description:"",
+      team: ["Bob Owens"],
+      slides:'',
+      duration: "Project duration",
+      skills: ["Full Stack Development", "React", "Tailwind CSS"],
+      paper_link: "https://med-supply-blush.vercel.app/dashboard",
+    },   
     {
     title: "CryptoFlow",
     image: "/cryptoflow.png",
