@@ -3,10 +3,32 @@
     import Modal from '../../components/modal.svelte';
 
     const projects = [
-      {
+        {
+    title: "FinancialAnalyst.ai",
+    image: "/financialanalystai.png",
+      overview: 'Medication supply dashboard for clinic distribution in healthsystems. <a href="https://v0-open-ai-and-ai-sdk-chatbot-nzdzyie2gne-p46bpp.vercel.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">FinancialAnalyst.ai</a>',
+      detail_description:"",
+      team: ["Bob Owens"],
+      slides:'',
+      duration: "Project duration",
+      skills: ["Full Stack Development", "React", "Tailwind CSS", "OpenAI"],
+      paper_link: "",
+    },       
+     {
     title: "MedSupply",
     image: "/medsupply.png",
       overview: 'Medication supply dashboard for clinic distribution in healthsystems. <a href="https://med-supply-blush.vercel.app/dashboard" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">MedSupply</a>',
+      detail_description:"",
+      team: ["Bob Owens"],
+      slides:'',
+      duration: "Project duration",
+      skills: ["Full Stack Development", "React", "Tailwind CSS"],
+      paper_link: "",
+    },      
+     {
+    title: "BudgetMaster",
+    image: "/budgetmaster.png",
+      overview: 'Budgeting tools to become a master of your budget. <a href="https://w3gxsfyzyl54fsrc.vercel.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">MedSupply</a>',
       detail_description:"",
       team: ["Bob Owens"],
       slides:'',
