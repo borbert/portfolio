@@ -28,7 +28,7 @@
      {
     title: "BudgetMaster",
     image: "/budgetmaster.png",
-      overview: 'Budgeting tools to become a master of your budget. <a href="https://w3gxsfyzyl54fsrc.vercel.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">MedSupply</a>',
+      overview: 'Budgeting tools to become a master of your budget. <a href="https://w3gxsfyzyl54fsrc.vercel.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">BudgetMaster</a>',
       detail_description:"",
       team: ["Bob Owens"],
       slides:'',
