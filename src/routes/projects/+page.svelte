@@ -17,7 +17,7 @@
     {
     title: "CryptoFlow",
     image: "/cryptoflow.png",
-      overview: 'Payment and currency manangement for individuals.  <a href="https://flow-currency-connect.lovable.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Cryptoflow</a>',
+      overview: 'Payment and currency manangement for individuals.  Receive and send currency in USD, BIT, or EUR. <a href="https://flow-currency-connect.lovable.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Cryptoflow</a>',
       detail_description:"",
       team: ["Bob Owens"],
       slides:'',
