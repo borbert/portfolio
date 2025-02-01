@@ -3,7 +3,18 @@
     import Modal from '../../components/modal.svelte';
 
     const projects = [
-  {
+    {
+    title: "CryptoFlow",
+    image: "/cryptoflow.png",
+      overview: 'Payment and currency manangement for individuals',
+      detail_description:"",
+      team: ["Bob Owens"],
+      slides:'',
+      duration: "Project duration",
+      skills: ["Full Stack Development", "React", "Tailwind CSS", "Blockchain"],
+      paper_link: "https://flow-currency-connect.lovable.app",
+    },    
+    {
     title: "Melanoma detection with OpenCV",
     image: "/melanoma_pic.png",
       overview: 'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions <a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>.',
