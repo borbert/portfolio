@@ -85,77 +85,101 @@ function openModal(project) {
 <div class="max-w-6xl mx-auto px-4 py-16">
     <h1 class="text-4xl font-bold mb-12 text-center">My Work</h1>
     
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {#each projects as project}
-
-          <div class="card bg-base-100 w-64 card-bordered border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h2 class="card-body font-bold mb-3 mt-3 mr-2 ml-2 text-center">{project.title}</h2>
-            <figure class="px-0 pt-0">
-              <img src={project.image} alt={project.title} class="w-full h-20 object-cover" />
-            </figure>
-            <div class="card-body p-4 flex flex-col flex-grow">
-              <p class="flex-grow">{@html project.overview}</p>
-              <div class="card-actions justify-end mt-auto">
-                <button class="btn btn-primary" on:click={() => openModal(project)}>
-                  View Details
-                </button>
-                <Modal show={selectedProject !== null} onClose={closeModal}>
-                    {#if selectedProject}
-                      <img src={selectedProject.image} alt={selectedProject.title} class="w-full h-64 object-cover mb-4" />
-                      <h2 class="text-2xl font-bold mb-2">{selectedProject.title}</h2>
-                      <p class="mb-4">{@html selectedProject.detail_description}</p>
-
-                      {#if selectedProject.team}
-                      <h3 class="team font-bold">Team</h3>
-                      {#each selectedProject.team as member}
-                        <p>{member}</p>
-                      {/each}
-                      {/if}
-
-                      {#if selectedProject.skills}
-                      <h3 class="technologies font-bold mt-4">Technologies Applied</h3>
-                      {#each selectedProject.skills as skill}
-                        <p>{skill}</p>
-                      {/each}
-                      {/if}
-
-                      {#if selectedProject.paper_link}
-                      <div class="mt-4">
-                          <a href={selectedProject.paper_link} download class="text-primary hover:underline text-md">Download Paper</a>
-                      </div>
-                      {/if}
-
-                      {#if selectedProject.slides}
-                      <div class="mt-4">
-                        <a href={selectedProject.slides} download class="text-primary hover:underline text-md">Download Slides</a>
+            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <figure class="px-4 pt-4">
+                    <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        class="rounded-xl h-48 w-full object-cover"
+                    />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-lg font-bold">{project.title}</h2>
+                    <p class="text-sm">{@html project.overview}</p>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        {#each project.skills.slice(0, 3) as skill}
+                            <div class="badge badge-outline">{skill}</div>
+                        {/each}
                     </div>
-                      {/if}
-    
-
-
-                    {/if}
-                </Modal>
-              </div>
+                    <div class="card-actions justify-end mt-4">
+                        <button 
+                            class="btn btn-primary btn-block"
+                            on:click={() => openModal(project)}
+                        >
+                            View Details
+                        </button>
+                    </div>
+                </div>
             </div>
-
-
-
-          </div>
-          
         {/each}
+    </div>
+</div>
+
+<Modal show={selectedProject !== null} onClose={closeModal}>
+    {#if selectedProject}
+        <div class="prose max-w-none">
+            <img 
+                src={selectedProject.image} 
+                alt={selectedProject.title} 
+                class="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <h2 class="text-2xl font-bold mb-4">{selectedProject.title}</h2>
+            <div class="mb-4">{@html selectedProject.detail_description}</div>
+
+            {#if selectedProject.team && selectedProject.team.length > 0}
+                <div class="mb-4">
+                    <h3 class="font-bold text-lg mb-2">Team</h3>
+                    <ul class="list-disc list-inside">
+                        {#each selectedProject.team as member}
+                            <li>{member}</li>
+                        {/each}
+                    </ul>
+                </div>
+            {/if}
+
+            {#if selectedProject.skills}
+                <div class="mb-4">
+                    <h3 class="font-bold text-lg mb-2">Technologies Applied</h3>
+                    <div class="flex flex-wrap gap-2">
+                        {#each selectedProject.skills as skill}
+                            <span class="badge badge-outline">{skill}</span>
+                        {/each}
+                    </div>
+                </div>
+            {/if}
+
+            <div class="flex gap-4 mt-6">
+                {#if selectedProject.paper_link}
+                    <a 
+                        href={selectedProject.paper_link} 
+                        download 
+                        class="btn btn-primary btn-sm"
+                    >
+                        Download Paper
+                    </a>
+                {/if}
+
+                {#if selectedProject.slides}
+                    <a 
+                        href={selectedProject.slides} 
+                        download 
+                        class="btn btn-primary btn-sm"
+                    >
+                        Download Slides
+                    </a>
+                {/if}
+            </div>
         </div>
-  </div>
-
-
-
+    {/if}
+</Modal>
 
 <style>
-    .card-title{
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #000;
+    /* Remove any custom CSS variables */
+    :global(.modal-content) {
+        max-height: 80vh;
+        overflow-y: auto;
     }
-
 </style>
   

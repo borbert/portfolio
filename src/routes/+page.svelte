@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
 
 import { onMount } from 'svelte';
 
 let isMobile = false;
+let hoveredCard: number | null = null;
 
 onMount(() => {
   const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -10,187 +11,184 @@ onMount(() => {
   mediaQuery.addListener((e) => isMobile = e.matches);
 });
 
-let hoveredCard = null;
+const educationData = [
+  {
+    degree: "Doctor of Pharmacy (PharmD)",
+    institution: "Campbell University",
+    year: "2006",
+    highlights: [
+      "Anatomy and Physiology",
+      "Biochemistry",
+      "Drug Information Literature Evaluation",
+      "Microbiology",
+      "Immunology",
+      "Biopharmacuetics",
+      "Clinical Biochemistry",
+      "Pharmacy Marketing and Management",
+      "Pharmacuetics",
+      "Pharmacokinetics",
+      "Pharmacology",
+      "Biology of Disease",
+      "Advanced Financial Management",
+      "Non-prescription Products",
+      "Research Design and Biostatistics",
+      "Therapeutics",
+      "Jurisprudence",
+      "Therapeutic Drug Monitoring",
+      "Community Pharmacy Management",
+      "Special Research Projects in Pharmacy",
+    ], 
+    icon:"/campbell-logo.png",
+    key_projects:[],
+  },
+  {
+    degree: "Master of Business Administration (MBA)",
+    concentration:"Graduate Certificate in Finance",
+    institution: "East Carolina University",
+    year: "2010",
+    highlights: [
+      "Financial and Managerial Accounting",
+      "Financial Management",
+      "Analysis of the Business and Economic Environment",
+      "Real Estate Analysis",
+      "Accounting for Decision Making",
+      "Financial Management",
+      "Management Information Systems",
+      "Comparative Management",
+      "Government Relations of Business",
+      "Investment Managment",
+      "Marketing Management",
+      "Protfolio Theory, Construction, and Management",
+      "Marketing Strategy",
+      "Operations and Supply Chain Management",
+      "Management Science",
+      "Advanced Writing for Business and Industry",
+      "Topics in Finance",
+      "Strategic Management",
+      "Organizational Behavior",
+      "Statistical Methods"
+    ], 
+    icon:"/ecu-logo.png",
+    key_projects:[],
+  },
+  {
+    degree: "Master of Computer Science (MSCS)",
+    concentration:"Data Mining and Intelligent Systems",
+    institution: "University of Tennessee",
+    year: "2024",
+    highlights: [
+      "Machine Learning",
+      "Deep Learning",
+      "Compliers and Runtime Systems",
+      "Data Mining and Analytics",
+      "Artifical Intelligence",
+      "Advanced Software Engineering",
+      "Digital Archeolgy",
+      "Applied Cryptography",
+      "Web & Cloud Computing",
+      "Compture Networks",
+    ], 
+    icon:"/UTlogo.png",
+    key_projects:[
 
-	const educationData = [
-    {
-      degree: "Doctor of Pharmacy (PharmD)",
-      institution: "Campbell University",
-      year: "2006",
-      highlights: [
-        "Anatomy and Physiology",
-        "Biochemistry",
-		"Drug Information Literature Evaluation",
-		"Microbiology",
-		"Immunology",
-		"Biopharmacuetics",
-		"Clinical Biochemistry",
-		"Pharmacy Marketing and Management",
-		"Pharmacuetics",
-		"Pharmacokinetics",
-		"Pharmacology",
-		"Biology of Disease",
-		"Advanced Financial Management",
-		"Non-prescription Products",
-		"Research Design and Biostatistics",
-		"Therapeutics",
-		"Jurisprudence",
-		"Therapeutic Drug Monitoring",
-		"Community Pharmacy Management",
-        "Special Research Projects in Pharmacy",
-      ], 
-	  icon:"/campbell-logo.png",
-	  key_projects:[],
-    },
-    {
-      degree: "Master of Business Administration (MBA)",
-	  concentration:"Graduate Certificate in Finance",
-      institution: "East Carolina University",
-      year: "2010",
-      highlights: [
-        "Financial and Managerial Accounting",
-        "Financial Management",
-        "Analysis of the Business and Economic Environment",
-		"Real Estate Analysis",
-		"Accounting for Decision Making",
-		"Financial Management",
-		"Management Information Systems",
-		"Comparative Management",
-		"Government Relations of Business",
-		"Investment Managment",
-		"Marketing Management",
-		"Protfolio Theory, Construction, and Management",
-		"Marketing Strategy",
-		"Operations and Supply Chain Management",
-		"Management Science",
-		"Advanced Writing for Business and Industry",
-		"Topics in Finance",
-		"Strategic Management",
-		"Organizational Behavior",
-		"Statistical Methods"
-      ], 
-	  icon:"/ecu-logo.png",
-	  key_projects:[],
-    },
-    {
-      degree: "Master of Computer Science (MSCS)",
-	  concentration:"Data Mining and Intelligent Systems",
-      institution: "University of Tennessee",
-      year: "2024",
-      highlights: [
-        "Machine Learning",
-        "Deep Learning",
-        "Compliers and Runtime Systems",
-		"Data Mining and Analytics",
-		"Artifical Intelligence",
-		"Advanced Software Engineering",
-		"Digital Archeolgy",
-		"Applied Cryptography",
-		"Web & Cloud Computing",
-		"Compture Networks",
-      ], 
-	  icon:"/UTlogo.png",
-	  key_projects:[
+    ],},
+  {
+    degree: "Lean Six Sigma Black Belt (LSSBB)",
+    concentration:"Healthcare",
+    institution: "Villanova",
+    year: "2014",
+    highlights: [
 
-	  ],},
-	{
-	  degree: "Lean Six Sigma Black Belt (LSSBB)",
-	  concentration:"Healthcare",
-      institution: "Villanova",
-      year: "2014",
-      highlights: [
-    
-      ], 
-	  icon:"/villanova icon.png",
-	  key_projects:[
+    ], 
+    icon:"/villanova icon.png",
+    key_projects:[
 
-	  ],
-    }
-  ];
-
-  const projectCategories = [
-  {
-    title: "Technology Implementations",
-    icon: "/ML_computer_icon.jpeg",
-    items: [
-      "Single hospital, multisite/multifacility, and health system Electronic Health Record (EHR) implementations",
-      "Multiple vendor pharmacy automation Implmentations",
-      "Single hospital, multisite/multifacility, and health system 340B Third-party Administrator (TPA) implementations with multiple vendors",
-	  "Home grown techonology combined with processes to supplement or be used as stop gaps measures pending technology implementations"
-    ]
-  },
-  {
-    title: "Data Governance",
-    icon: "/data_governance.png",
-    items: [
-      "Connecting pharmacy departments with health system data governance and master data management (MDM)",
-	  "Establishing data governance processes and oversight teams",
-      "Instituting standard operating proceudres to reinforce governance and master data management within analytics teams",
-	  "Aligning workteams across business units and corporate infromation technology (IT) to foster collaboration"
-    ]
-  },
-  {
-    title: "Application Development",
-    icon: "/application_development.png",
-    items: [
-		
-      'Web development: examples <a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>, this portfolio site.',
-      "CrabChat (Rust based secure chat application)",
-	  "Application programing interface (API) development, full stack development, and websocket programming",
-	  "Agile development and project management",
-	  "Cloud services stack:  Azure and AWS"
-    ]
-  },
-  {
-    title: "Data Science",
-    icon: "/data_science_icon.png",
-    items: [
-		"Financial, clinical, and tranactional based analysis of health system data using multiple statistical techniques",
-		"Finding and exploting patterns in data to drive operational efficiency and improve patient outcomes",
-      "Analysis of data collected via web scraping with Python packages (httpx and beautifulsoup4)",
-	  "Social network analysis",
-      "Sentiment analysis of health system data using natural language processing (NLP) techniques to help define topics and trends",
-      "Latent space cluster analysis of the clinical documentation as opposed to large language models (LLM) interpretation of the same data"
-    ]
-  },
-  {
-    title: "Machine Learning",
-    icon: "/ML_icon.png",
-    items: [
-      "Forecasting drug costs using classical machine learning and time series technigues",
-      'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions', //<a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>
-      'Detecting ambulation types by collected sound data', //<a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
-      'Detecting Autism with eye gaze paths',  // <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
-      'Predicting Titanic Survivors <a href="https://www.kaggle.com/code/robertlowens/notebook8d06f319ad" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
-    ]
-  },
-  {
-    title: "Deep Learning",
-    icon: "/dl_icon.png",
-    items: [
-      'Real time object detection in sterile compounding suites <a href="/Real_time_Object_Detection_in_Sterile_Compounding_Areas.pdf" download class="text-primary hover:underline text-md">pdf</a>',
-      "Using transformers to generate \"new\" song lyrics in the style of the original artist",
-	  "Generating images with Generative Adversarial Networks (GANs)",
-      'Generate images in the style of Monet <a href="https://www.kaggle.com/robertlowens/bob-cyclegan-pytorch" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
-    ]
-  },
-  {
-    title: "Natural Language Processing",
-    icon: "/nlp_icon.jpeg",
-    items: [
-		"Using LLMs to analyze clinical documentation and generate insights",
-      'Detect disasters from X (Twitter) tweets <a href=" https://www.kaggle.com/code/robertlowens/bowens-7-15" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
-      'Digit recognition  <a href="https://www.kaggle.com/code/robertlowens/bobassignment8-17" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
-      'Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words', //<a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
-    ]
+    ],
   }
+];
+
+const projectCategories = [
+{
+  title: "Technology Implementations",
+  icon: "/ML_computer_icon.jpeg",
+  items: [
+    "Single hospital, multisite/multifacility, and health system Electronic Health Record (EHR) implementations",
+    "Multiple vendor pharmacy automation Implmentations",
+    "Single hospital, multisite/multifacility, and health system 340B Third-party Administrator (TPA) implementations with multiple vendors",
+    "Home grown techonology combined with processes to supplement or be used as stop gaps measures pending technology implementations"
+  ]
+},
+{
+  title: "Data Governance",
+  icon: "/data_governance.png",
+  items: [
+    "Connecting pharmacy departments with health system data governance and master data management (MDM)",
+    "Establishing data governance processes and oversight teams",
+    "Instituting standard operating proceudres to reinforce governance and master data management within analytics teams",
+    "Aligning workteams across business units and corporate infromation technology (IT) to foster collaboration"
+  ]
+},
+{
+  title: "Application Development",
+  icon: "/application_development.png",
+  items: [
+    'Web development: examples <a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>, this portfolio site.',
+    "CrabChat (Rust based secure chat application)",
+    "Application programing interface (API) development, full stack development, and websocket programming",
+    "Agile development and project management",
+    "Cloud services stack:  Azure and AWS"
+  ]
+},
+{
+  title: "Data Science",
+  icon: "/data_science_icon.png",
+  items: [
+    "Financial, clinical, and tranactional based analysis of health system data using multiple statistical techniques",
+    "Finding and exploting patterns in data to drive operational efficiency and improve patient outcomes",
+    "Analysis of data collected via web scraping with Python packages (httpx and beautifulsoup4)",
+    "Social network analysis",
+    "Sentiment analysis of health system data using natural language processing (NLP) techniques to help define topics and trends",
+    "Latent space cluster analysis of the clinical documentation as opposed to large language models (LLM) interpretation of the same data"
+  ]
+},
+{
+  title: "Machine Learning",
+  icon: "/ML_icon.png",
+  items: [
+    "Forecasting drug costs using classical machine learning and time series technigues",
+    'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions', //<a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>
+    'Detecting ambulation types by collected sound data', //<a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
+    'Detecting Autism with eye gaze paths',  // <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
+    'Predicting Titanic Survivors <a href="https://www.kaggle.com/code/robertlowens/notebook8d06f319ad" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
+  ]
+},
+{
+  title: "Deep Learning",
+  icon: "/dl_icon.png",
+  items: [
+    'Real time object detection in sterile compounding suites <a href="/Real_time_Object_Detection_in_Sterile_Compounding_Areas.pdf" download class="text-primary hover:underline text-md">pdf</a>',
+    "Using transformers to generate \"new\" song lyrics in the style of the original artist",
+    "Generating images with Generative Adversarial Networks (GANs)",
+    'Generate images in the style of Monet <a href="https://www.kaggle.com/robertlowens/bob-cyclegan-pytorch" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>'
+  ]
+},
+{
+  title: "Natural Language Processing",
+  icon: "/nlp_icon.jpeg",
+  items: [
+    "Using LLMs to analyze clinical documentation and generate insights",
+    'Detect disasters from X (Twitter) tweets <a href=" https://www.kaggle.com/code/robertlowens/bowens-7-15" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
+    'Digit recognition  <a href="https://www.kaggle.com/code/robertlowens/bobassignment8-17" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Kaggle</a>',
+    'Identification of the Authors Edgar Allan Poe, HP Lovecraft and Mary Shelley with a sample sentence or key words', //<a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
+  ]
+}
 ];
 $: abbreviations = projectCategories.map(category => {
     return category.title.split(' ').map(word => word[0]).join('');
   });
 
-  const presentations = [
-	{
+const presentations = [
+  {
     title: "Pharmacy Data Governance Journey",
     event: "Prominence Data Governance Roundtable",
     date: "Aug 19, 2024",
@@ -266,14 +264,14 @@ const aboutMeData = {
       "Native of East Tennessee",
       "Father of three active boys",
       "Avid college football fan",
-	  "Served in the Army National Guard and in active duty following September 11th, 2001",
+      "Served in the Army National Guard and in active duty following September 11th, 2001",
       "Passionate about ML/AI and data science advancements",
     ],
     activities: [
       "Attending my children's sporting events",
       "Reading about the latest ML/AI research",
       "Exploring new developments in data science",
-	  "Traveling"
+      "Traveling"
     ],
     personalStatement: "As a native of East Tennessee and a husband and father of three active boys, I balance my professional pursuits with family life. When I'm not cheering at my children's sporting events, you'll find me deeply engrossed in the latest advancements and research in ML/AI and data science. My passion for technology and innovation is matched only by my enthusiasm for college football and traveling."
   };

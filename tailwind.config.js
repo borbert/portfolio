@@ -3,7 +3,7 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
-      colors:{
+      colors: {
         primary: '#3B82F6', // A vibrant blue
         secondary: '#10B981', // A fresh green
         accent: '#F59E0B', // A warm orange
@@ -13,7 +13,7 @@ export default {
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
-  daisyui : {
+  daisyui: {
     themes: [
       "light",
       "dark",
