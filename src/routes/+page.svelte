@@ -132,7 +132,7 @@ const projectCategories = [
   title: "Application Development",
   icon: "/application_development.png",
   items: [
-    'Web development: examples <a href="https://www.340bdruginfo.com" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>, this portfolio site.',
+    'Web development: examples <a href="https://340-b-info-app-react.vercel.app/" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>, this portfolio site.',
     "CrabChat (Rust based secure chat application)",
     "Application programing interface (API) development, full stack development, and websocket programming",
     "Agile development and project management",
