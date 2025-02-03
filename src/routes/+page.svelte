@@ -505,7 +505,7 @@ const aboutMeData = {
 			</li>
 			<li>
 				Download my 
-				<a href="/RLOResume.08.20.2024.pdf" download class="text-primary hover:underline text-lg">resume</a>
+				<a href="/RLOResume.02.01.2025.pdf" download class="text-primary hover:underline text-lg">resume</a>
 			</li>
 		</ul>
 	</div>
