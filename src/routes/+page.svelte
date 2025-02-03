@@ -83,7 +83,7 @@ const educationData = [
       "Data Mining and Analytics",
       "Artifical Intelligence",
       "Advanced Software Engineering",
-      "Digital Archeolgy",
+      "Digital Archeology",
       "Applied Cryptography",
       "Web & Cloud Computing",
       "Compture Networks",
