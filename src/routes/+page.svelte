@@ -56,9 +56,9 @@ const educationData = [
       "Management Information Systems",
       "Comparative Management",
       "Government Relations of Business",
-      "Investment Managment",
+      "Investment Management",
       "Marketing Management",
-      "Protfolio Theory, Construction, and Management",
+      "Portfolio Theory, Construction, and Management",
       "Marketing Strategy",
       "Operations and Supply Chain Management",
       "Management Science",
@@ -79,14 +79,14 @@ const educationData = [
     highlights: [
       "Machine Learning",
       "Deep Learning",
-      "Compliers and Runtime Systems",
+      "Compilers and Runtime Systems",
       "Data Mining and Analytics",
-      "Artifical Intelligence",
+      "Artificial Intelligence",
       "Advanced Software Engineering",
       "Digital Archeology",
       "Applied Cryptography",
       "Web & Cloud Computing",
-      "Compture Networks",
+      "Computer Networks",
     ], 
     icon:"/UTlogo.png",
     key_projects:[
@@ -112,10 +112,10 @@ const projectCategories = [
   title: "Technology Implementations",
   icon: "/ML_computer_icon.jpeg",
   items: [
-    "Single hospital, multisite/multifacility, and health system Electronic Health Record (EHR) implementations",
-    "Multiple vendor pharmacy automation Implmentations",
-    "Single hospital, multisite/multifacility, and health system 340B Third-party Administrator (TPA) implementations with multiple vendors",
-    "Home grown techonology combined with processes to supplement or be used as stop gaps measures pending technology implementations"
+    "Single hospital, multi-site/multi-facility, and health system Electronic Health Record (EHR) implementations",
+    "Multiple vendor pharmacy automation Implementations",
+    "Single hospital, multi-site/multi-facility, and health system 340B Third-party Administrator (TPA) implementations with multiple vendors",
+    "Home grown technology combined with processes to supplement or be used as stop gaps measures pending technology implementations"
   ]
 },
 {
@@ -124,8 +124,8 @@ const projectCategories = [
   items: [
     "Connecting pharmacy departments with health system data governance and master data management (MDM)",
     "Establishing data governance processes and oversight teams",
-    "Instituting standard operating proceudres to reinforce governance and master data management within analytics teams",
-    "Aligning workteams across business units and corporate infromation technology (IT) to foster collaboration"
+    "Instituting standard operating procedures to reinforce governance and master data management within analytics teams",
+    "Aligning workteams across business units and corporate information technology (IT) to foster collaboration"
   ]
 },
 {
@@ -134,7 +134,7 @@ const projectCategories = [
   items: [
     'Web development: examples <a href="https://340-b-info-app-react.vercel.app/" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>, this portfolio site.',
     "CrabChat (Rust based secure chat application)",
-    "Application programing interface (API) development, full stack development, and websocket programming",
+    "Application programming interface (API) development, full stack development, and websocket programming",
     "Agile development and project management",
     "Cloud services stack:  Azure and AWS"
   ]
@@ -143,8 +143,8 @@ const projectCategories = [
   title: "Data Science",
   icon: "/data_science_icon.png",
   items: [
-    "Financial, clinical, and tranactional based analysis of health system data using multiple statistical techniques",
-    "Finding and exploting patterns in data to drive operational efficiency and improve patient outcomes",
+    "Financial, clinical, and transactional based analysis of health system data using multiple statistical techniques",
+    "Finding and exploiting patterns in data to drive operational efficiency and improve patient outcomes",
     "Analysis of data collected via web scraping with Python packages (httpx and beautifulsoup4)",
     "Social network analysis",
     "Sentiment analysis of health system data using natural language processing (NLP) techniques to help define topics and trends",
@@ -155,7 +155,7 @@ const projectCategories = [
   title: "Machine Learning",
   icon: "/ML_icon.png",
   items: [
-    "Forecasting drug costs using classical machine learning and time series technigues",
+    "Forecasting drug costs using classical machine learning and time series techniques",
     'Melanoma detection with OpenCV library and traditional diagnostic markers of skin lesions', //<a href="/melanoma_final_report.pdf" download class="text-primary hover:underline text-md">pdf</a>
     'Detecting ambulation types by collected sound data', //<a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
     'Detecting Autism with eye gaze paths',  // <a href="/projects" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">projects</a>
@@ -190,7 +190,7 @@ $: abbreviations = projectCategories.map(category => {
 const presentations = [
   {
     title: "Pharmacy Data Governance Journey",
-    event: "Prominence Data Governance Roundtable",
+    event: "Prominence Data Governance Round Table",
     date: "Aug 19, 2024",
     description: "Describing the journey of a pharmacy department to establish data governance in collaboration with enterprise data governance efforts.",
     link: ""
@@ -273,7 +273,7 @@ const aboutMeData = {
       "Exploring new developments in data science",
       "Traveling"
     ],
-    personalStatement: "As a native of East Tennessee and a husband and father of three active boys, I balance my professional pursuits with family life. When I'm not cheering at my children's sporting events, you'll find me deeply engrossed in the latest advancements and research in ML/AI and data science. My passion for technology and innovation is matched only by my enthusiasm for college football and traveling."
+    personalStatement: "As a native of East Tennessee, a husband, and father of three active boys, I balance my professional pursuits with family life. When I'm not cheering at my children's sporting events, you'll find me deeply engrossed in the latest advancements and research in ML/AI and data science. My passion for technology and innovation is matched only by my enthusiasm for college football and traveling."
   };
 
 </script>
@@ -292,7 +292,7 @@ const aboutMeData = {
 		  Hi, there.  My name is Robert (Bob) Owens. I am a strategic thinker and problem solver with education in pharmacy, business, computer science, data science, and intelligent systems. 
 		  With extensive experience in pharmacy administration and leadership at a top non-profit health system, I leverage my analytical skills to drive change and develop innovative solutions in healthcare.
 		  My passion lies in utilizing technology, analytics, and process improvement to enhance operational efficiency and improve patient outcomes, making me a valuable asset in both clinical and administrative settings.
-		  As a veteran of US military, I also bring discipline, leadership, and perserverance to the challenges I face.
+		  As a veteran of US military, I also bring discipline, leadership, and perseverance to the challenges I face.
 		</p>
 	  </div>
 	</div>

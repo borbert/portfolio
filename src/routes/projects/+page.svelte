@@ -6,7 +6,7 @@
 			title: 'FinancialAnalyst.ai',
 			image: '/financialanalystai.png',
 			overview:
-				'Medication supply dashboard for clinic distribution in healthsystems. <a href="https://v0-open-ai-and-ai-sdk-chatbot-nzdzyie2gne-p46bpp.vercel.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">FinancialAnalyst.ai</a>',
+				'Financial analyst chat bot using OpenAI API. <a href="https://v0-open-ai-and-ai-sdk-chatbot-nzdzyie2gne-p46bpp.vercel.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">FinancialAnalyst.ai</a>',
 			detail_description: '',
 			team: ['Bob Owens'],
 			slides: '',
@@ -18,7 +18,7 @@
 			title: 'MedSupply',
 			image: '/medsupply.png',
 			overview:
-				'Medication supply dashboard for clinic distribution in healthsystems. <a href="https://med-supply-blush.vercel.app/dashboard" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">MedSupply</a>',
+				'Medication supply dashboard for clinic distribution in health systems. <a href="https://med-supply-blush.vercel.app/dashboard" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">MedSupply</a>',
 			detail_description: '',
 			team: ['Bob Owens'],
 			slides: '',
@@ -42,7 +42,7 @@
 			title: 'CryptoFlow',
 			image: '/cryptoflow.png',
 			overview:
-				'Payment and currency manangement for individuals.  Receive and send currency in USD, BIT, or EUR. <a href="https://flow-currency-connect.lovable.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Cryptoflow</a>',
+				'Payment and currency management for individuals.  Receive and send currency in USD, BIT, or EUR. <a href="https://flow-currency-connect.lovable.app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Cryptoflow</a>',
 			detail_description: '',
 			team: ['Bob Owens'],
 			slides: '',
@@ -68,7 +68,7 @@
 			overview:
 				'Real time object detection in sterile compounding suites using YOLOv8 <a href="/Real_time_Object_Detection_in_Sterile_Compounding_Areas.pdf" download class="text-primary hover:underline text-md">pdf</a>.',
 			detail_description:
-				'This project presents an innovative approach to enhancing safety and efficiency in sterile compounding areas through the implementation of real-time object detection using computer vision and machine learning techniques. The research focuses on developing a system capable of identifying and tracking various objects and personnel within the sterile environments. By leveraging state-of-the-art deep learning models and custom-trained datasets specific to pharmacy compounding settings, the system achieves high accuracy in object detection and classification. The potiential real-time application of the system allows for immediate alerts and interventions, significantly reducing the risk of errors and contamination in critical sterile compounding processes. The paper discusses the methodology, experimental results, and potential applications of this technology in improving patient safety and regulatory compliance in pharmaceutical compounding facilities.',
+				'This project presents an innovative approach to enhancing safety and efficiency in sterile compounding areas through the implementation of real-time object detection using computer vision and machine learning techniques. The research focuses on developing a system capable of identifying and tracking various objects and personnel within the sterile environments. By leveraging state-of-the-art deep learning models and custom-trained datasets specific to pharmacy compounding settings, the system achieves high accuracy in object detection and classification. The potential real-time application of the system allows for immediate alerts and interventions, significantly reducing the risk of errors and contamination in critical sterile compounding processes. The paper discusses the methodology, experimental results, and potential applications of this technology in improving patient safety and regulatory compliance in pharmaceutical compounding facilities.',
 			role: 'Team project',
 			team: ['Andrew Waggoner', 'Kyle Russell', 'Bob Owens'],
 			slides: '/Final Project Online Group 2.pdf',
@@ -79,7 +79,7 @@
 			title: 'Autism Detection with Eye Gaze Paths',
 			image: '/autism_gaze.png',
 			detail_description:
-				'Data was collected from subjects as they watched a video.  The data was the path of their eye gaze as they watched the video.  The assumption behind this research is that individuals with autism focus or avoid certain parts of the video, for exmaple they respond to faces in the video differently than individuals who show no signs of autism. This eye gaze path data was used with a variet of techniques to creates features to use in a machine learning model.',
+				'Data was collected from subjects as they watched a video.  The data was the path of their eye gaze as they watched the video.  The assumption behind this research is that individuals with autism focus or avoid certain parts of the video, for example they respond to faces in the video differently than individuals who show no signs of autism. This eye gaze path data was used with a variet of techniques to creates features to use in a machine learning model.',
 			overview: 'Can the eye gaze path of subject help detect autism?',
 			role: 'Team project',
 			team: '',
@@ -90,7 +90,7 @@
 			title: '340BDrugInfo.com',
 			image: '/www.340bdruginfo.com_drugsearch.png',
 			detail_description:
-				'This website leverages the APIs available from the FDA NDC Drug Dictonary and the Medicaid Drug Rebate Program (MDRP).  It also uses the CMS ASP NDC Crosswalk to provide additional information.  The objective of this web app is to give a 340B practioner package size information at the 9-digit NDC level and the CMS HCPCS and billing units per package information.  The MDRP data allows one to know if that drug has been included in the MDRP program. <a href="https://340-b-info-app-react.vercel.app/" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>.  I created this tool in 2021 and published it on the web in 2022.  It is currently undergoing a rebuild and domain migration.',
+				'This website leverages the APIs available from the FDA NDC Drug Dictionary and the Medicaid Drug Rebate Program (MDRP).  It also uses the CMS ASP NDC Crosswalk to provide additional information.  The objective of this web app is to give a 340B practitioner package size information at the 9-digit NDC level and the CMS HCPCS and billing units per package information.  The MDRP data allows one to know if that drug has been included in the MDRP program. <a href="https://340-b-info-app-react.vercel.app/" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a>.  I created this tool in 2021 and published it on the web in 2022.  It is currently undergoing a rebuild and domain migration.',
 			overview:
 				'<a href="https://340-b-info-app-react.vercel.app/" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">340BDrugInfo.com</a> is a website that where I combined three drug information resources that were useful for 340B operations and management.',
 			role: '',
