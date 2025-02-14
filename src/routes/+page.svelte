@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let isMobile = false;
 	let hoveredCard: number | null = null;
@@ -280,6 +281,8 @@
 			"As a native of East Tennessee, a husband, and father of three active boys, I balance my professional pursuits with family life. When I'm not cheering at my children's sporting events, you'll find me deeply engrossed in the latest advancements and research in ML/AI and data science. My passion for technology and innovation is matched only by my enthusiasm for college football and traveling."
 	};
 </script>
+
+<SEO />
 
 <section id="home" class="flex min-h-screen flex-col items-center justify-center">
 	<div class="mb-8 flex max-w-4xl items-center {isMobile ? 'flex-col px-4' : ''}">

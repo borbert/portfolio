@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import SEO from '$lib/components/SEO.svelte';
 	import Modal from '../../components/modal.svelte';
 
 	const projects = [
@@ -130,6 +131,12 @@
 		selectedProject = null;
 	}
 </script>
+
+<SEO 
+	title="Projects - Bob Owens | Healthcare Technology Portfolio"
+	description="Explore Bob Owens' portfolio of healthcare technology projects, including machine learning applications, web development, and data science solutions."
+	keywords="healthcare projects, machine learning, web development, data science, healthcare technology, Bob Owens"
+/>
 
 <div class="mx-auto max-w-6xl px-4 py-16">
 	<div class="mb-12 flex items-center justify-between">
